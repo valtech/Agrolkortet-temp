@@ -366,6 +366,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="dist\assets\img\background-small.png" />
+    <Content Include="dist\assets\img\icon-close.svg" />
+    <Content Include="dist\assets\img\icon-lock.svg" />
+    <Content Include="dist\assets\img\icon-menu.svg" />
+    <Content Include="dist\assets\img\logotype.png" />
     <Content Include="dist\lib\ofi.min.js" />
     <Content Include="gulpfile.js" />
     <Content Include="Gulp\copy-binary.js" />
@@ -437,6 +442,8 @@
     <Content Include="dist\assets\fonts\LantmannenSans-Regular.ttf" />
     <Content Include="dist\assets\fonts\LantmannenSans-Regular.woff" />
     <Content Include="dist\assets\fonts\LantmannenSans-Regular.woff2" />
+    <Content Include="Views\_HeaderNavigation.cshtml" />
+    <Content Include="src\scss\modules\_headerNavigation.scss" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -465,9 +472,7 @@
   <ItemGroup>
     <None Include="readme.md" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="dist\assets\img\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

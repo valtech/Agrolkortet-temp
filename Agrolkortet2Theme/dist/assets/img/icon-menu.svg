@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="12px" viewBox="0 0 17 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="faq" transform="translate(-24.000000, -28.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="Hamburger_icon" transform="translate(24.000000, 28.000000)">
+                <path d="M1.21428571,2.4 L15.7857143,2.4 C16.456,2.4 17,1.8624 17,1.2 C17,0.5376 16.456,0 15.7857143,0 L1.21428571,0 C0.544,0 0,0.5376 0,1.2 C0,1.8624 0.544,2.4 1.21428571,2.4 Z M15.7857143,4.8 L1.21428571,4.8 C0.544,4.8 0,5.3376 0,6 C0,6.6624 0.544,7.2 1.21428571,7.2 L15.7857143,7.2 C16.456,7.2 17,6.6624 17,6 C17,5.3376 16.456,4.8 15.7857143,4.8 Z M15.7857143,9.6 L1.21428571,9.6 C0.544,9.6 0,10.1376 0,10.8 C0,11.4624 0.544,12 1.21428571,12 L15.7857143,12 C16.456,12 17,11.4624 17,10.8 C17,10.1376 16.456,9.6 15.7857143,9.6 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
