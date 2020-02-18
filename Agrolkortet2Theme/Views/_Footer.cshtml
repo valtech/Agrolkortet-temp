@@ -1,0 +1,25 @@
+<!-- Footer (Agrolkortet2Theme) / -->
+
+<script>
+    var userAgent = window.navigator.userAgent,
+        isIeOrEdge = /msie\s|trident\/|edge\//i.test(userAgent) && !!(document.uniqueID || window.MSInputMethodContext);
+
+    // Object-fit polyfill
+    if (isIeOrEdge) {
+        // Picture element HTML5 shiv
+        document.createElement("picture");
+        document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.js" integrity="sha256-uttYJd+gaT1hgbYhYhGbIeFa1yK6JRnE6TVRZXroqIM= sha384-sZ5pXIkrDl3eRlngKdrIocxQTpwHhWBQVagS2MHvYtv7u6kaTzd1OTh5ft4mrbhr sha512-drjFOp5kJZcuEVTcN/PK4FrW9oqCLkpSrpZel1LIpZDaUFCMSMpd6aiIdQ5wiigsebaPW4t0fyIO2HLVSwTMJw==" crossorigin="anonymous"><\/script>');
+        document.write('<script src="/dist/Agrolkortet2Theme/lib/ofi.min.js" type="text/javascript"><\/script>');
+    }
+</script>
+
+@if (HttpContext.Current.IsDebuggingEnabled)
+{
+    // Development
+    <script src="@Fingerprint.Tag("/dist/Agrolkortet2Theme/footer.js")"></script>
+}
+else
+{
+    // Production
+    <script src="@Fingerprint.Tag("/dist/Agrolkortet2Theme/footer.min.js")"></script>
+}

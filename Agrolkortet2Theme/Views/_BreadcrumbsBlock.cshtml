@@ -1,0 +1,16 @@
+﻿@model BreadcrumbsBlockViewModel
+
+<div class="breadcrumbs">
+    <ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+        @{var position = 1;}
+        @foreach (var viewModel in Model.ViewModels)
+        {
+            <li class="breadcrumb" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                @Html.PageLink(viewModel.Current.PageLink)
+                <meta itemprop="item" content="@viewModel.PageCanonicalUrl" />
+                <meta itemprop="name" content="@viewModel.PageTitle" />
+                <meta itemprop="position" content="@(position++)" />
+            </li>
+        }
+    </ul>
+</div>

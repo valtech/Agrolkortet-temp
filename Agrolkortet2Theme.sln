@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agrolkortet2Theme", "Agrolkortet2Theme\Agrolkortet2Theme.csproj", "{5BE3E703-618F-409F-BA9E-7365838351E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Playground|Any CPU = Playground|Any CPU
+		Prod|Any CPU = Prod|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Stage|Any CPU = Stage|Any CPU
+		Test|Any CPU = Test|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5BE3E703-618F-409F-BA9E-7365838351E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BE3E703-618F-409F-BA9E-7365838351E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BE3E703-618F-409F-BA9E-7365838351E3}.Playground|Any CPU.ActiveCfg = Playground|Any CPU
+		{5BE3E703-618F-409F-BA9E-7365838351E3}.Playground|Any CPU.Build.0 = Playground|Any CPU
+		{5BE3E703-618F-409F-BA9E-7365838351E3}.Prod|Any CPU.ActiveCfg = Prod|Any CPU
+		{5BE3E703-618F-409F-BA9E-7365838351E3}.Prod|Any CPU.Build.0 = Prod|Any CPU
+		{5BE3E703-618F-409F-BA9E-7365838351E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BE3E703-618F-409F-BA9E-7365838351E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BE3E703-618F-409F-BA9E-7365838351E3}.Stage|Any CPU.ActiveCfg = Stage|Any CPU
+		{5BE3E703-618F-409F-BA9E-7365838351E3}.Stage|Any CPU.Build.0 = Stage|Any CPU
+		{5BE3E703-618F-409F-BA9E-7365838351E3}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{5BE3E703-618F-409F-BA9E-7365838351E3}.Test|Any CPU.Build.0 = Test|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24B7BD95-2786-43D8-91AD-13D2DC21D847}
+	EndGlobalSection
+EndGlobal

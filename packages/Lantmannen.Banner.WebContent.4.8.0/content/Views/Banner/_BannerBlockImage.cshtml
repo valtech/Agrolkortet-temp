@@ -1,0 +1,25 @@
+﻿@model BannerImageBlockViewModel
+@Model.Start(this)
+@if (Model.Has(Model.MediumImage))
+{
+    <picture class="banner-image">
+        @if (Model.Has(Model.SmallImage))
+        {
+        <source srcset="@Url.ContentUrl(Model.SmallImage)" media="(max-width: 767px)">
+        }
+        @if (Model.Has(Model.LargeImage))
+        {
+        <source srcset="@Url.ContentUrl(Model.LargeImage)" media="(min-width: 1200px)">
+        }
+        <source srcset="@Url.ContentUrl(Model.MediumImage)">
+        <img srcset="@Url.ContentUrl(Model.MediumImage)" alt="@Model.Description">
+    </picture>
+}
+else
+{
+    <picture class="banner-image">
+        <source srcset="http://placehold.it/800x400/CC0000/FFFFFF?text=@Url.Encode(Model.ErrorMessage)"/>
+        <img src="http://placehold.it/800x400/CC0000/FFFFFF?text=@Url.Encode(Model.ErrorMessage)" alt="@Model.ErrorMessage">
+    </picture>
+}
+@Model.End(this)

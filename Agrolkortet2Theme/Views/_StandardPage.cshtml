@@ -1,0 +1,65 @@
+﻿@model StandardPageViewModel
+@using Lantmannen.Helpers
+@using EPiServer.ServiceLocation
+@using EPiServer
+@using EPiServer.Core.Html
+
+@Model.Start(this)
+
+@{
+    var shouldCropImage = Model.Has(Model.Current.Callout.Image) == false;
+    var smallImageUrl = shouldCropImage ? Url.GetCropUrl(Model.CalloutImage, 450, 300) : Url.ContentUrl(Model.CalloutImage) + "?maxwidth=500";
+    var largeImageUrl = string.Empty;
+    var imageAltText = string.Empty;
+
+    if (Model.Has(Model.CalloutImage))
+    {
+        var image = ServiceLocator.Current.GetInstance<IContentLoader>()
+            .Get<ImageData>(Model.CalloutImage);
+        imageAltText = (string)image["Description"];
+    }
+
+    if (shouldCropImage)
+    {
+        largeImageUrl = Url.GetCropUrl(Model.CalloutImage, 768, 512);
+    }
+    else
+    {
+        largeImageUrl = Url.ContentUrl(Model.CalloutImage) + "?maxwidth=768";
+    }
+}
+
+<div class="callout callout-standard">
+    <a href="@Url.ContentUrl(Model.Current.LinkURL)" class="callout-link">
+
+        @if (Model.Has(Model.CalloutImage))
+        {
+            <picture class="callout__image-wrapper">
+                <source srcset="@largeImageUrl" media="(min-width: 768px)">
+                <img srcset="@smallImageUrl" class="callout-image" alt="@imageAltText">
+            </picture>
+        }
+
+        <div class="callout-body">
+            @if (Model.Has(Model.CalloutTitle))
+            {
+                <h3 class="callout__title">@Model.CalloutTitle</h3>
+            }
+
+            @if (Model.Has(Model.CalloutDescription))
+            {
+                <p class="callout__text">@TextIndexer.StripHtml(WebUtility.HtmlDecode(Model.CalloutDescription.ToHtmlString()), 200)</p>
+            }
+
+            @if (Model.Has(Model.Current.Callout.LinkText))
+            {
+                <span href="@Url.ContentUrl(Model.Current.LinkURL)" class="callout__link-text">
+                    @Model.Current.Callout.LinkText
+                </span>
+            }
+        </div>
+
+    </a>
+</div>
+
+@Model.End(this)

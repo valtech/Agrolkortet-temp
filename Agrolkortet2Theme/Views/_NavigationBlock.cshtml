@@ -1,0 +1,17 @@
+@model NavigationBlockViewModel
+
+<nav class="navigation" role="navigation">
+    <a href="javascript:void(0)" class="hamburger-button" id="hamburger-button">
+        <span class="hamburger-button__title">@Model.Current.Title</span>
+        <div class="hamburger-button__icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </a>
+
+    <ul class="navigation__list">
+        @{ Html.RenderPartial(this.PathToViews(typeof(NavigationBlockViewModel), "_NavigationTree.cshtml"), Model.Navigation); }
+    </ul>
+</nav>

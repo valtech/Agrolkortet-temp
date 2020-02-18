@@ -1,0 +1,10 @@
+@model LogoBlockViewModel
+
+<div class="logo" itemscope itemtype="http://schema.org/logo">
+    <a class="logo__link" href="@LogoBlockViewModel.LogoLink">
+        <meta itemprop="logo" content="@Url.ContentUrl(Model.Current.StandardImage)" />
+        <picture class="logo__image">
+            <img srcset="@Url.ContentUrl(Model.Current.StandardImage)" alt="@Model.ImageAlt">
+        </picture>
+    </a>
+</div>

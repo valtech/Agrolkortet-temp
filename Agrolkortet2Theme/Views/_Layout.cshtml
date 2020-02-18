@@ -1,0 +1,79 @@
+﻿@using Lantmannen.Theme
+
+@model ICorePageViewModel<CorePage>
+
+<!doctype html>
+<!--[if lt IE 8]> <html class="no-js ie7 oldie" lang="@Model.Current.Language.Name"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 oldie" lang="@Model.Current.Language.Name"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9 oldie" lang="@Model.Current.Language.Name"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="@Model.Current.Language.Name">
+<!--<![endif]-->
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    @Model.HeaderMetaDescription
+    @Model.HeaderMetaKeywords
+    @Model.HeaderCanonicalUrl
+    @Model.HeaderMetaRobots
+
+    <title>@Model.HeaderTitle</title>
+
+    <!-- HeaderIncludes / -->
+    @foreach (var headerInclude in Model.HeaderIncludes)
+    {
+        Html.RenderPartial(headerInclude, Model.Current);
+    }
+    <!-- / HeaderIncludes -->
+    <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    @Model.Background.Image()
+    @RenderSection(RenderingTags.Header, required: false)
+    @Html.RequiredClientResources(RenderingTags.Header)
+</head>
+<body class="@Model.ThemeCssClass @Model.Current.GetPageWrapperStyle() @Model.Style @Model.LanguageClass">
+    @Html.RenderEPiServerQuickNavigator()
+
+    <!-- BodyIncludes / -->
+    @foreach (var bodyInclude in Model.BodyIncludes)
+    {
+        Html.RenderPartial(bodyInclude, Model.Current);
+    }
+    <!-- / BodyIncludes -->
+    @Model.Start(this)
+
+    <div class="container-full">
+
+        <header id="header">
+            <div class="container">
+                <!-- Header / -->
+                @Html.PropertyFor(m => m.Header)
+                <!-- / Header -->
+            </div>
+        </header>
+
+        @RenderBody()
+
+        <footer id="footer">
+            <!-- Footer / -->
+            @Html.PropertyFor(m => m.Footer)
+            <!-- / Footer -->
+        </footer>
+
+    </div>
+
+    <!-- FooterIncludes / -->
+    @foreach (var footerInclude in Model.FooterIncludes)
+    {
+        Html.RenderPartial(footerInclude, Model.Current);
+    }
+    <!-- / FooterIncludes -->
+    @RenderSection(RenderingTags.Footer, required: false)
+    @Html.RequiredClientResources(RenderingTags.Footer)
+    @Model.End(this)
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿@model FeatureBannerBlockViewModel
+@Model.Start(this)
+@if (Model.HasCurrent())
+{
+    <div class="banner @Model.Current.Style">
+        @{ Html.RenderPartial(this.PathToViews(Model.GetType(), "_BannerBlockImage.cshtml"), Model.Image); }
+        <div class="banner-text-box">
+            <h2 class="banner-title">@Model.Current.Title</h2>
+            @if (Model.Has(Model.Current.SubTitle))
+            {
+                <p class="banner-sub-title">@Model.Current.SubTitle</p>
+            }
+            <div class="banner-body">@Html.PropertyFor(m => m.Current.Body)</div>
+        </div>
+        
+        <div class="banner-teasers">
+            @Html.PropertyFor(x => x.Current.Teasers)
+        </div>
+    </div>
+}
+@Model.End(this)

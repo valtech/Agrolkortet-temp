@@ -1,0 +1,14 @@
+@model CalloutBlockViewModel
+
+<div class="callout @Model.Current.Style">
+    @if (Model.Has(Model.Current.Image))
+    {
+        <img class="callout-image" srcset="@Url.ContentUrl(Model.Current.Image)" alt="@Model.ImageDescription">
+    }
+
+    @if (Model.Has(Model.Current.Title))
+    {
+        <h3 class="callout__title">@Model.Current.Title</h3>
+    }
+    <div class="callout__text">@Html.PropertyFor(m => m.Current.Body)</div>
+</div>

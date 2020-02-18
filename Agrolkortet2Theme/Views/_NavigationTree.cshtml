@@ -1,0 +1,23 @@
+@using EPiServer.Web.Routing
+@model IEnumerable<NavigationPage>
+
+@{
+    var pageRouteHelper = EPiServer.ServiceLocation.ServiceLocator.Current.GetInstance<IPageRouteHelper>();
+    var cLink = pageRouteHelper.Page.ContentLink;
+}
+
+@foreach (var item in Model)
+{
+    var level = item.LevelClass.Split('-')[1];
+    <li class="navigation__item navigation__item--@level @item.IsActiveClass @(cLink.CompareToIgnoreWorkID(item.Link) ? "is-selected" : "")">
+        <a class="navigation__item-title @item.IsActiveClass" href="@Url.ContentUrl(item.Link)">
+            @item.Name
+        </a>
+        @if (item.HasChildren)
+        {
+            <ul class="navigation__list--@(Convert.ToInt32(level) + 1)">
+                @{ Html.RenderPartial(this.PathToViews(typeof(NavigationBlockViewModel), "_NavigationTree.cshtml"), item.Children); }
+            </ul>
+        }
+    </li>
+}

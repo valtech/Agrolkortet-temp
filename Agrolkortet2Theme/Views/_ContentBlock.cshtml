@@ -1,0 +1,11 @@
+@model ContentBlockViewModel
+
+<div class="content @Model.Current.Style">
+    @if (Model.Has(Model.Current.Title))
+    {
+        <h2 class="content__title">@Html.Raw(Model.Current.Title)</h2>
+    }
+    <div class="content__body">
+        @Html.PropertyFor(m => m.Current.Content)
+    </div>
+</div>

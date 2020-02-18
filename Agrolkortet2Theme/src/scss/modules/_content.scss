@@ -1,0 +1,15 @@
+.content {
+	width: 100%;
+	max-width: 650px;
+	// TODO: Remove if not necessary
+	&__title {
+	}
+
+	&__preamble p {
+		font-size: 1.25rem;
+		color: $color-dark-grey;
+	}
+
+	&__body {
+	}
+}

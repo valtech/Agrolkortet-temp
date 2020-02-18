@@ -1,0 +1,107 @@
+#OS junk files
+[Tt]humbs.db
+*.DS_Store
+
+#Visual Studio files
+*.[Oo]bj
+*.user
+*.aps
+*.pch
+*.vspscc
+*.vssscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.[Cc]ache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.sdf
+*.opensdf
+*.unsuccessfulbuild
+ipch/
+[Oo]bj/
+[Bb]in
+source/**/[Dd]ebug*/
+[Rr]elease*/
+Ankh.NoLoad
+.vs
+
+#MonoDevelop
+*.pidb
+*.userprefs
+
+#Tooling
+_ReSharper*/
+*.resharper
+[Tt]est[Rr]esult*
+*.sass-cache
+*.DotSettings.user
+
+#Project files
+[Bb]uild/
+[Dd]eploy/
+
+#Subversion files
+.svn
+
+# Office Temp Files
+~$*
+
+# vim Temp Files
+*~
+
+#NuGet
+packages/
+*.nupkg
+!source/ThirdParty/*.nupkg
+packages/FAKE.3.7.4
+
+#ncrunch
+*ncrunch*
+*crunch*.local.xml
+
+# visual studio database projects
+*.dbmdl
+
+#Test files
+*.testsettings
+
+# EPiServer
+source/appdata/blobs/*
+!appdata/blobs/readme.md
+source/Web/modules/*
+!source/Web/modules/_protected/
+source/Web/modulesbin/*
+!source/Web/modulesbin/readme.md
+App_Data/*
+imagecache/
+
+source/Web/connectionStrings.config
+source/Web/episerver.config
+source/Web/EPiServerFramework.config
+source/Web/EPiServerLog.config
+source/Web/License.config
+source/Web/Web.config
+source/Web/version.txt
+
+configuration/*.tmp
+*.orig
+
+!configuration/Debug/
+
+#Log Files
+source/logs
+
+#Grunt
+node_modules
+bower_components
+
+#For development only
+Agrolkortet2/dist/*.js
+Agrolkortet2/dist/*.css

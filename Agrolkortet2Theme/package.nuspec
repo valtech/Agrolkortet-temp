@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<package>
+    <metadata>
+        <id>Lantmannen.Agrolkortet2Theme</id>
+        <version>1.0.1</version>
+        <title>Theme: Agrolkortet2Theme</title>
+        <authors>CGI/Valtech</authors>
+        <owners>Lantmannen</owners>
+        <projectUrl>https://lm-online.visualstudio.com/DefaultCollection/GreenWebFramework/</projectUrl>
+        <iconUrl>http://i.imgur.com/QBc2jJj.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Green Web Framework - Agrolkortet2 Theme</description>
+        <releaseNotes>Intitial Setup</releaseNotes>
+        <copyright>Copyright 2019</copyright>
+        <tags></tags>
+        <dependencies>
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\Lantmannen.Agrolkortet2Theme.dll" target="lib" />
+        <file src="dist\**\*.*" target="content/dist/Agrolkortet2Theme" exclude=" dist\assets\dev\**\*.*;**\*.html;**\*.md;**\.gitkeep" />
+        <file src="Views\**\*.*" target="content/Views/Agrolkortet2Theme" />
+    </files>
+</package>

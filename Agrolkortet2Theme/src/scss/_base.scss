@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+	color: $color-text;
+	margin: 0;
+	background: $color-white;
+}
+
+a {
+    color: $color-link;
+
+    &:hover, &:active {
+        text-decoration: underline;
+    }
+}
+
+img {
+	width: 100%;
+	max-width: 100%;
+}
+
+.no-scroll {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}

@@ -1,0 +1,36 @@
+@model StandardPageViewModel
+
+@{
+    Layout = "_Layout.cshtml";
+}
+
+<main class="@Model.Current.Style">
+    <section class="page-top">
+        @Html.PropertyFor(m => m.Current.FeatureArea)
+    </section>
+
+    <section class="content">
+        <h1 class="content__title">
+            @Html.PropertyFor(m => m.Current.StandardTitle)
+        </h1>
+
+        <div class="content__preamble">
+            @Html.PropertyFor(m => m.Current.StandardPreamble)
+        </div>
+
+        @if (Model.Has(Model.Current.StandardImage))
+        {
+            <div class="content__image">
+                <img src="@Url.ContentUrl(Model.Current.StandardImage)" alt="" />
+            </div>
+        }
+
+        <div class="content__body">
+            @Html.PropertyFor(m => m.Current.StandardBody)
+        </div>
+    </section>
+
+    <section class="page-block-area">
+        @Html.PropertyFor(m => m.Current.AfterContentArea)
+    </section>
+</main>
