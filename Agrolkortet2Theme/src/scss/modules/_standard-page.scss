@@ -14,5 +14,10 @@
 
     .content-body {
         @include p-max-width;
+
+        img {
+            width: 100%;
+            max-width: 100%;
+        }
     }
 }
