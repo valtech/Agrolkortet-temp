@@ -6,10 +6,14 @@
     .content-wrapper {
         @include container;
         padding: $base-padding;
+        background: $color-white;
     }
 
     .content-preamble {
-        @extend %preamble;
+        p {
+            @extend %preamble;
+            @include p-max-width;
+        }
     }
 
     .content-body {
