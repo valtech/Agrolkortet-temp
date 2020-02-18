@@ -408,12 +408,16 @@
     <Content Include="src\scss\modules\_navigation.scss" />
     <Content Include="src\scss\modules\_start-page.scss" />
     <Content Include="src\scss\main.scss" />
+    <Content Include="src\scss\modules\_banner.scss" />
     <Content Include="src\scss\_base.scss" />
     <Content Include="src\scss\_colors.scss" />
+    <Content Include="src\scss\_variables.scss" />
+    <Content Include="src\scss\_grid.scss" />
     <Content Include="src\scss\_layout.scss" />
     <Content Include="src\scss\_typography.scss" />
     <Content Include="src\scss\modules\_article-page.scss" />
     <Content Include="src\scss\modules\_breadcrumbs.scss" />
+    <Content Include="src\scss\modules\_list.scss" />
     <Content Include="src\scss\modules\_logo.scss" />
     <Content Include="Views\_BreadcrumbsBlock.cshtml" />
     <Content Include="Views\_CalloutBlock.cshtml" />

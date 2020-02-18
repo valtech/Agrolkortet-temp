@@ -1,0 +1,43 @@
+@mixin grid-container() {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: calc(#{$grid-gap} / 2); 
+
+    @include for-phone-only {
+        padding: 0;
+    }
+}
+
+@mixin grid-column($columns) {
+    display: flex;
+    flex-basis: 100%;
+    margin: $half-grid-gap;
+
+    @include for-phone-only {
+        flex-direction: column;
+        margin: calc(#{$half-grid-gap} / 2) 0;
+    }
+
+    @if $columns == 2 {
+        @include for-tablet-and-up {
+            flex-basis: calc(50% - #{$grid-gap});
+            
+        }
+    }
+
+    @if $columns == 3 {
+        @include for-tablet-and-up {
+            flex-basis: calc(33.333% - #{$grid-gap});
+
+        }
+    }
+
+    @if $columns == 4 {
+        
+        @include for-tablet-and-up {
+            flex-basis: calc(25% - #{$grid-gap});
+
+        }
+    }
+}

@@ -1,5 +1,24 @@
-$base-padding: 0 1rem;
+.list-container {
+    @include container;
+    @include grid-container();
 
-* {
-    box-sizing: border-box;
+    &.list-onecolumn > div {
+        @include grid-column(1);
+    }
+
+    &.list-twocolumn > div {
+        @include grid-column(2);
+    }
+
+    &.list-threecolumn > div {
+        @include grid-column(3);
+    }
+
+    &.list-fourcolumn > div {
+        @include grid-column(4);
+    }
+
+    > div {
+        margin-bottom: 1rem;
+    }
 }

@@ -11,20 +11,22 @@
 @import 'mixins/object-fit';
 @import 'mixins/buttons';
 @import 'mixins/mixins';
+@import "mixins/grid";
 
 // Base
+@import "variables";
 @import "colors";
-@import "typography";
-@import "layout";
 @import "base";
+@import "layout";
+@import "typography";
 
 // Modules
 @import "modules/article-page";
+@import 'modules/banner';
 @import 'modules/breadcrumbs';
 @import "modules/callout";
 @import "modules/content";
 @import 'modules/cookie';
-@import 'modules/file-list';
 @import 'modules/forms';
 @import 'modules/logo';
 @import 'modules/navigation';

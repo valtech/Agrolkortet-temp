@@ -20,7 +20,7 @@ html {
 	font-family: $font-sans;
 	font-size: 90%;
 
-	@include desktop-up {
+	@include for-desktop-and-up {
 		font-size: 100%;
 	}
 }
