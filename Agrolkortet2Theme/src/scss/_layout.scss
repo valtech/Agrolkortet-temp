@@ -1,24 +1,22 @@
-.list-container {
-    @include container;
-    @include grid-container();
+.list-wrapper {
+    & > div {
+        @include container;
+        @include grid-container();
+    }
 
-    &.list-onecolumn > div {
+    &.list-onecolumn > div > div {
         @include grid-column(1);
     }
 
-    &.list-twocolumn > div {
+    &.list-twocolumn > div > div {
         @include grid-column(2);
     }
 
-    &.list-threecolumn > div {
+    &.list-threecolumn > div > div {
         @include grid-column(3);
     }
 
-    &.list-fourcolumn > div {
+    &.list-fourcolumn > div > div {
         @include grid-column(4);
-    }
-
-    > div {
-        margin-bottom: 1rem;
     }
 }

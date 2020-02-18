@@ -22,8 +22,6 @@
     width: 100%;
     margin: auto;
     max-width: $container-width;
-    margin: 0 $base-margin;
-    padding: 0 $base-padding;
 }
 
 @mixin p-max-width {

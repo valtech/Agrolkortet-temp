@@ -407,6 +407,7 @@
     <Content Include="src\scss\modules\_forms.scss" />
     <Content Include="src\scss\modules\_navigation.scss" />
     <Content Include="src\scss\modules\_start-page.scss" />
+    <Content Include="src\scss\modules\_standard-page.scss" />
     <Content Include="src\scss\main.scss" />
     <Content Include="src\scss\modules\_banner.scss" />
     <Content Include="src\scss\_base.scss" />
@@ -419,6 +420,8 @@
     <Content Include="src\scss\modules\_breadcrumbs.scss" />
     <Content Include="src\scss\modules\_list.scss" />
     <Content Include="src\scss\modules\_logo.scss" />
+    <Content Include="Views\_BannerBlock.cshtml" />
+    <Content Include="Views\_BannerBlockImage.cshtml" />
     <Content Include="Views\_BreadcrumbsBlock.cshtml" />
     <Content Include="Views\_CalloutBlock.cshtml" />
     <Content Include="Views\_ContentBlock.cshtml" />

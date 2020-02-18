@@ -1,12 +1,6 @@
 @mixin grid-container() {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    padding: calc(#{$grid-gap} / 2); 
-
-    @include for-phone-only {
-        padding: 0;
-    }
 }
 
 @mixin grid-column($columns) {
@@ -16,7 +10,6 @@
 
     @include for-phone-only {
         flex-direction: column;
-        margin: calc(#{$half-grid-gap} / 2) 0;
     }
 
     @if $columns == 2 {

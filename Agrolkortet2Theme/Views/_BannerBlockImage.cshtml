@@ -1,0 +1,33 @@
+﻿@model BannerImageBlockViewModel
+@using Lantmannen.Helpers;
+@Model.Start(this)
+
+@{
+    var defaultImageOnly =  !(Model.Has(Model.SmallImage) || Model.Has(Model.MediumImage));
+}
+
+<picture class="banner-image">
+    @if (Model.Has(Model.SmallImage))
+    {
+        <source srcset="@Url.ContentUrl(Model.SmallImage)" media="(max-width: 767px)">
+    }
+
+    @if (Model.Has(Model.MediumImage))
+    {
+        <source srcset="@Url.ContentUrl(Model.MediumImage)" media="(min-width: 1200px)">
+    }
+
+    @if (defaultImageOnly) 
+    {
+        <source srcset="@Url.ContentUrl(Model.LargeImage)?maxwidth=1920" media="(min-width: 1600px)">
+        <source srcset="@Url.ContentUrl(Model.LargeImage)?maxwidth=1600" media="(min-width: 1366px)">
+        <source srcset="@Url.ContentUrl(Model.LargeImage)?maxwidth=1366" media="(min-width: 768px)">
+        <img srcset="@Url.GetCropUrl(Model.LargeImage, 500, 350)" alt="@Model.Description">
+    }
+    else {
+        <source srcset="@Url.ContentUrl(Model.LargeImage)">
+        <img srcset="@Url.ContentUrl(Model.LargeImage)" alt="@Model.Description">
+    }
+</picture>
+
+@Model.End(this)

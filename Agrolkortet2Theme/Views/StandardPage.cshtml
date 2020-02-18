@@ -1,36 +1,79 @@
+@using Lantmannen.Helpers;
 @model StandardPageViewModel
 
 @{
     Layout = "_Layout.cshtml";
+    var pageHasImageAndTitle = Model.Has(Model.Current.StandardImage) && Model.Has(Model.Current.StandardTitle);
 }
 
-<main class="@Model.Current.Style">
-    <section class="page-top">
-        @Html.PropertyFor(m => m.Current.FeatureArea)
-    </section>
-
-    <section class="content">
-        <h1 class="content__title">
-            @Html.PropertyFor(m => m.Current.StandardTitle)
-        </h1>
-
-        <div class="content__preamble">
-            @Html.PropertyFor(m => m.Current.StandardPreamble)
-        </div>
-
-        @if (Model.Has(Model.Current.StandardImage))
+<main>
+    <section class="feature-area">
+        @if (pageHasImageAndTitle)
         {
-            <div class="content__image">
-                <img src="@Url.ContentUrl(Model.Current.StandardImage)" alt="" />
+            <div class="banner">
+                <picture class="banner-image">
+                    <!--[if IE 9]><video style="display: none;"><![endif]-->
+                    <source srcset="@Url.ContentUrl(Model.Current.StandardImage)?maxwidth=1920" media="(min-width: 1600px)">
+                    <source srcset="@Url.ContentUrl(Model.Current.StandardImage)?maxwidth=1600" media="(min-width: 1366px)">
+                    <source srcset="@Url.ContentUrl(Model.Current.StandardImage)?maxwidth=1366" media="(min-width: 768px)">
+                    <!--[if IE 9]></video><![endif]-->
+                    <img srcset="@Url.GetCropUrl(Model.Current.StandardImage, 500, 350)">
+                </picture>
+                <div class="banner-overlay">
+                    <div class="banner-text-box">
+                        <h1 class="banner-title">@Html.PropertyFor(m => m.Current.StandardTitle)</h1> 
+                    </div>
+                </div>
             </div>
         }
-
-        <div class="content__body">
-            @Html.PropertyFor(m => m.Current.StandardBody)
-        </div>
+        else
+        {
+            @Html.PropertyFor(m => m.Current.FeatureArea)
+        }
     </section>
 
-    <section class="page-block-area">
-        @Html.PropertyFor(m => m.Current.AfterContentArea)
+    @if (Model.Has(Model.Current.BeforeContentArea) || Model.Has(Model.Current.StandardPreamble) || Model.Has(Model.Current.StandardBody) || Model.Has(Model.Current.AfterContentArea))
+    {
+        <section class="main">
+            @if (Model.Has(Model.Current.BeforeContentArea))
+                {
+                <div class="before-content">
+                    @Html.PropertyFor(m => m.Current.BeforeContentArea)
+                </div>
+            }
+            @if (Model.Has(Model.Current.StandardPreamble) || Model.Has(Model.Current.StandardBody))
+            {
+                <div class="container">
+                    <div class="content-wrapper">
+                        @if (Model.Has(Model.Current.StandardPreamble))
+                        {
+                            <div class="content-preamble">
+                                @Html.PropertyFor(m => m.Current.StandardPreamble)
+                            </div>
+                        }
+
+                        @if (Model.Has(Model.Current.StandardBody))
+                        {
+                            <div class="content-body">
+                                @Html.PropertyFor(m => m.Current.StandardBody)
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+            @if (Model.Has(Model.Current.AfterContentArea))
+            {
+                <div class="after-content">
+                    @Html.PropertyFor(m => m.Current.AfterContentArea)
+                </div>
+            }
+        </section>
+    }
+
+    <section class="page-footer">
+        @if (Model.Has(Model.Current.PageFooterArea))
+        {
+            @Html.PropertyFor(m => m.Current.PageFooterArea)
+        }
     </section>
 </main>

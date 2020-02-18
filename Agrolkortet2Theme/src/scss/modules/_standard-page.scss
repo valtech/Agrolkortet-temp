@@ -1,0 +1,18 @@
+.standard-page {
+    .container {
+        margin: $base-margin;
+    }
+
+    .content-wrapper {
+        @include container;
+        padding: $base-padding;
+    }
+
+    .content-preamble {
+        @extend %preamble;
+    }
+
+    .content-body {
+        @include p-max-width;
+    }
+}

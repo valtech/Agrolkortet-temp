@@ -1,10 +1,10 @@
 $base-margin: 1rem;
 $base-padding: 1rem;
 
+$grid-gap: 1rem;
+$half-grid-gap: $grid-gap / 2;
+
 $screen-width-sm: 768px;
 $screen-width-lg: 1200px;
 
 $container-width: 1200px;
-
-$grid-gap: 2rem;
-$half-grid-gap: $grid-gap / 2;

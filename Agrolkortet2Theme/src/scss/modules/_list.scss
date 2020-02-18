@@ -1,3 +1,8 @@
 ﻿.list {
-    
+    @include container;
+    padding: $base-padding;
+
+    &-wrapper {
+        margin: 0 - $half-grid-gap;
+    }
 }

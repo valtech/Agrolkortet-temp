@@ -1,0 +1,18 @@
+@model BannerBlockViewModel
+
+<div class="banner @Model.Current.Style">
+        @{ Html.RenderPartial(this.PathToViews(Model.GetType(), "_BannerBlockImage.cshtml"), Model.Image); }
+        <div class="banner-overlay">
+            <div class="banner-text-box">
+                @if (Model.Current.ShouldHaveH1Title)
+                {
+                    <h1 class="banner-title">@Html.Raw(Model.Current.Title)</h1>
+                }
+                else
+                {
+                    <h2 class="banner-title">@Html.Raw(Model.Current.Title)</h2>
+                }
+            </div>
+        </div>
+    }
+</div>
