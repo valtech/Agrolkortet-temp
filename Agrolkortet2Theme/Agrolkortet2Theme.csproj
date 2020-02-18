@@ -415,7 +415,6 @@
     <Content Include="src\scss\modules\_article-page.scss" />
     <Content Include="src\scss\modules\_breadcrumbs.scss" />
     <Content Include="src\scss\modules\_logo.scss" />
-    <Content Include="src\scss\modules\_file-list.scss" />
     <Content Include="Views\_BreadcrumbsBlock.cshtml" />
     <Content Include="Views\_CalloutBlock.cshtml" />
     <Content Include="Views\_ContentBlock.cshtml" />
