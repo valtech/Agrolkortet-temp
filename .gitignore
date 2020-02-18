@@ -103,5 +103,5 @@ node_modules
 bower_components
 
 #For development only
-Agrolkortet2/dist/*.js
-Agrolkortet2/dist/*.css
+Agrolkortet2Theme/dist/*.js
+Agrolkortet2Theme/dist/*.css
