@@ -1,3 +1,15 @@
-@mixin desktop-up {
-	@media (min-width: 1024px) { @content; }
+@mixin for-phone-only {
+    @media (max-width: $screen-width-sm - 1) { @content; }
+}
+
+@mixin for-tablet-and-up {
+	@media (min-width: $screen-width-sm) { @content; }
+}
+
+@mixin for-desktop-and-up {
+	@media (min-width: $screen-width-lg) { @content; }
+}
+
+@mixin for-custom-screen-and-up($min-width : 768px) {
+	@media (min-width: $min-width) { @content; }
 }
