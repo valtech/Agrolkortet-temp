@@ -1,18 +1,28 @@
 @model BannerBlockViewModel
 
 <div class="banner @Model.Current.Style">
-        @{ Html.RenderPartial(this.PathToViews(Model.GetType(), "_BannerBlockImage.cshtml"), Model.Image); }
-        <div class="banner-overlay">
-            <div class="banner-text-box">
-                @if (Model.Current.ShouldHaveH1Title)
-                {
-                    <h1 class="banner-title">@Html.Raw(Model.Current.Title)</h1>
-                }
-                else
-                {
-                    <h2 class="banner-title">@Html.Raw(Model.Current.Title)</h2>
-                }
-            </div>
+    @{ Html.RenderPartial(this.PathToViews(Model.GetType(), "_BannerBlockImage.cshtml"), Model.Image); }
+    <div class="banner-overlay">
+        <div class="banner-text-box">
+            @if (Model.Current.ShouldHaveH1Title)
+            {
+                <h1 class="banner-title" @Html.EditAttributes(m => m.Current.Title)>
+                    @Html.Raw(Model.Current.Title)
+                </h1>
+            }
+            else
+            {
+                <h2 class="banner-title" @Html.EditAttributes(m => m.Current.Title)>
+                    @Html.Raw(Model.Current.Title)
+                </h2>
+            }
+
+            <div class="banner-body">@Html.PropertyFor(m => m.Current.Body)</div>
+            
+            @if (Model.Has(Model.Current.Link))
+            {
+                <a class="banner-link" href="@Url.ContentUrl(Model.Current.Link.ToString())">@Model.Current.LinkText</a>
+            }
         </div>
-    }
+    </div>
 </div>

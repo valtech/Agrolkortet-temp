@@ -33,7 +33,16 @@
 
             em {
                 color: $color-blue-nice;
+                font-style: normal;
             }
+        }
+
+        .banner-body p {
+            @extend %preamble;
+        }
+
+        .banner-link {
+            @include primary-btn;
         }
     }
 }
