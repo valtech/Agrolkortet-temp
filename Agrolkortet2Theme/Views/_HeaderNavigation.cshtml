@@ -1,18 +1,23 @@
-﻿@using Lantmannen.Core;
+﻿@using Lantmannen.Helpers;
 
-<div class="header-navigation">
+    <div class="header-navigation">
 
-    <div class="header-navigation__list">
-        <div type="button" class="header-navigation__menu-button"></div>
-        @*@HtmlHelpers.MenuList();*@
+
+        <a class="menu-button"></a>
+        <ul class="menu-list">
+            @Html.MenuList(ContentReference.StartPage,
+                        @<li class="@(item.Selected ? "active" : null)">
+                            @Html.PageLink(item.Page, null, new { @class = "link" })
+                        </li>)
+        </ul>
+
+        <a href="@Url.ContentUrl(ContentReference.StartPage)" title="Till startsidan" @*TODO: Översättningsfil*@>
+            <img class="logo" src="~/dist/Agrolkortet2Theme/assets/img/logotype.png" />
+        </a>
+
+
+        <div class="login-wrapper">
+            Logga in@*Lägg i översättningsfil*@
+        </div>
     </div>
-
-    <div class="header-navigation__logo">
-        
-    </div>
-
-    <div class="header-navigation__login">
-        Logga in@*Lägg i översättningsfil*@
-    </div>
-</div>
 
