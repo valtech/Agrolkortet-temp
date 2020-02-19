@@ -1,11 +1,14 @@
 .banner {
     position: relative;
     width: 100%;
-    max-height: 30vh;
     min-height: 20vw;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include for-desktop-and-up {
+        max-height: 30vh;
+    }
 
     &-image {
         position: absolute;
