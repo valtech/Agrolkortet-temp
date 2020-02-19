@@ -1,7 +1,7 @@
 ﻿.header-navigation {
 	position: absolute;
 	width: 100%;
-	height: 93px;
+	height: $mobile-header-height;
 	left: 0;
 	top: 0;
 	display: flex;
@@ -20,6 +20,7 @@
 		background-image: url(assets/img/icon-menu.svg);
 		background-repeat: no-repeat;
 		position: relative;
+		z-index: 10;
 	}
 
 	.menu-list {
@@ -37,6 +38,7 @@
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
+		z-index: 10;
 	}
 
 	.login-wrapper {
@@ -57,6 +59,7 @@
 .mobile-menu-open {
 	height: 100%;
 	background: $color-white;
+	z-index: 5;
 
 	.login-wrapper {
 		display: none;
@@ -73,12 +76,14 @@
 		list-style-type: none;
 		text-align: center;
 
-		&__item {
+		a {
+			text-decoration: none;
 			color: $color-black;
-			font-size: 50px;
 			font-size: 23px;
-			line-height: 2.35;
+			line-height: 3;
 			letter-spacing: 0.58px;
+			font-weight: 1000;
 		}
+		
 	}
 }
