@@ -6,7 +6,7 @@
         <a class="menu-button"></a>
         <ul class="menu-list">
             @Html.MenuList(ContentReference.StartPage,
-                        @<li class="menu-list__item, @(item.Selected ? "active" : null)">
+                        @<li class="@(item.Selected ? "active" : null)">
                             @Html.PageLink(item.Page, null, new { @class = "link" })
                         </li>)
         </ul>
