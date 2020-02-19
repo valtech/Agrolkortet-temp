@@ -153,8 +153,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Lantmannen.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Lantmannen.Core.4.7.1\lib\Lantmannen.Core.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\Lantmannen.Core.4.7.13\lib\Lantmannen.Core.dll</HintPath>
     </Reference>
     <Reference Include="Lantmannen.Event, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Lantmannen.Event.4.8.0\lib\Lantmannen.Event.dll</HintPath>
@@ -385,6 +384,7 @@
     <Content Include="Gulp\watch.js" />
     <Content Include="Setup\Theme_sv.xml" />
     <Content Include="src\js\apps\CookieinfoHandler.js" />
+    <Content Include="src\js\apps\MobileHeaderMenu.js" />
     <Content Include="src\js\script.js" />
     <Content Include="package.nuspec">
       <SubType>Designer</SubType>
