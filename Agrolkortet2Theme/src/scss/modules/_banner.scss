@@ -1,3 +1,39 @@
 .banner {
-    
+    position: relative;
+    width: 100%;
+    max-height: 30vh;
+    min-height: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-image {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+
+        img {
+            @include object-fit(cover);
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &-text-box {
+        max-width: 800px;
+        text-align: center;
+        padding: 3rem;
+        
+        .banner-title {
+            text-transform: uppercase;
+            color: $color-blue-light-soft;
+            margin-top: 0;
+            line-height: 1;
+
+            em {
+                color: $color-blue-nice;
+            }
+        }
+    }
 }
