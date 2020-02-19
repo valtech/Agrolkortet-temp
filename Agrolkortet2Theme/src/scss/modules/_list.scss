@@ -1,8 +1,19 @@
 ﻿.list {
     @include container;
     padding: $base-padding;
+    text-align: center;
 
     &-wrapper {
         margin: 0 - $half-grid-gap;
     }
+
+    &-link {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        
+        a {
+            @include secondary-btn;
+        }
+    } 
 }

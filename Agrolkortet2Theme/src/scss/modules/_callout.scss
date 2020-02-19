@@ -1,5 +1,24 @@
 ﻿.callout {
     width: 100%;
-    border: 1px solid black;
-    padding: $base-padding;
+
+    a {
+        text-decoration: none;
+    }
+    
+    &__body {
+        padding: $base-padding;
+        text-decoration: none;
+        color: $color-text;
+        text-align: center;
+    }
+
+    &__title {
+        @extend h4;
+        margin-top: 0;
+        text-decoration: none;
+    }
+
+    &__button {
+        @include secondary-btn;
+    }
 }

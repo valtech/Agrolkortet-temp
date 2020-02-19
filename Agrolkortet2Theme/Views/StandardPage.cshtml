@@ -24,6 +24,13 @@
                         <h1 class="banner-title">
                             @Html.PropertyFor(m => m.Current.StandardTitle)
                         </h1> 
+
+                        @if (Model.Has(Model.Current.StandardPreamble))
+                        {
+                            <div class="banner-body">
+                                @Html.PropertyFor(m => m.Current.StandardPreamble)
+                            </div>
+                        }
                     </div>
                 </div>
             </div>
@@ -34,7 +41,7 @@
         }
     </section>
 
-    @if (Model.Has(Model.Current.BeforeContentArea) || Model.Has(Model.Current.StandardPreamble) || Model.Has(Model.Current.StandardBody) || Model.Has(Model.Current.AfterContentArea))
+    @if (Model.Has(Model.Current.BeforeContentArea) || Model.Has(Model.Current.StandardBody) || Model.Has(Model.Current.AfterContentArea))
     {
         <section class="main">
             @if (Model.Has(Model.Current.BeforeContentArea))
@@ -47,13 +54,6 @@
             {
                 <div class="container">
                     <div class="content-wrapper">
-                        @if (Model.Has(Model.Current.StandardPreamble))
-                        {
-                            <div class="content-preamble">
-                                @Html.PropertyFor(m => m.Current.StandardPreamble)
-                            </div>
-                        }
-
                         @if (Model.Has(Model.Current.StandardBody))
                         {
                             <div class="content-body">

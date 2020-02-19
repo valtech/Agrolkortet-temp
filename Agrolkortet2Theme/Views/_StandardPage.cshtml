@@ -40,7 +40,7 @@
             </picture>
         }
 
-        <div class="callout-body">
+        <div class="callout__body">
             @if (Model.Has(Model.CalloutTitle))
             {
                 <h3 class="callout__title">@Model.CalloutTitle</h3>
@@ -53,12 +53,11 @@
 
             @if (Model.Has(Model.Current.Callout.LinkText))
             {
-                <span href="@Url.ContentUrl(Model.Current.LinkURL)" class="callout__link-text">
+                <span href="@Url.ContentUrl(Model.Current.LinkURL)" class="callout__button">
                     @Model.Current.Callout.LinkText
                 </span>
             }
         </div>
-
     </a>
 </div>
 
