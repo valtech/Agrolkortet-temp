@@ -1,4 +1,13 @@
 .standard-page {
+    .feature-area {
+        .banner:first-of-type {
+            .banner-overlay {
+                @include for-phone-only {
+                    padding-top: $header-height;
+                } 
+            }
+        }
+    }
     .container {
         margin: $base-margin;
     }

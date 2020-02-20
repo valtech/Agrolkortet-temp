@@ -1,50 +1,50 @@
 .banner {
-	position: relative;
-	width: 100%;
-	min-height: 20vw;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    position: relative;
+    width: 100%;
+    min-height: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-	@include for-desktop-and-up {
-		max-height: 30vh;
-	}
+    @include for-desktop-and-up {
+        max-height: 30vh;
+    }
 
-	&-image {
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		z-index: -1;
+    &-image {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
 
-		img {
-			@include object-fit(cover);
-			height: 100%;
-			width: 100%;
-		}
-	}
+        img {
+            @include object-fit(cover);
+            height: 100%;
+            width: 100%;
+        }
+    }
 
-	&-text-box {
-		max-width: 800px;
-		text-align: center;
-		padding: 3rem;
+    &-text-box {
+        max-width: 800px;
+        text-align: center;
+        padding: 3rem;
+        
+        .banner-title {
+            text-transform: uppercase;
+            margin-top: 0;
+            line-height: 1;
 
-		.banner-title {
-			text-transform: uppercase;
-			margin-top: 0;
-			line-height: 1;
+            em {
+                color: $color-blue-nice;
+                font-style: normal;
+            }
+        }
 
-			em {
-				color: $color-blue-nice;
-				font-style: normal;
-			}
-		}
+        .banner-body p {
+            @extend %preamble;
+        }
 
-		.banner-body p {
-			@extend %preamble;
-		}
-
-		.banner-link {
-			@include primary-btn;
-		}
-	}
+        .banner-link {
+            @include primary-btn;
+        }
+    }
 }
