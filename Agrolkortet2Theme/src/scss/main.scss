@@ -5,7 +5,6 @@
 // No styles should be written in this file!
 // ------------------------------------------------------------------------- //
 
-
 // Mixins
 @import 'mixins/mediaqueries';
 @import 'mixins/object-fit';
@@ -28,6 +27,7 @@
 @import "modules/content";
 @import 'modules/cookie';
 @import 'modules/forms';
+@import 'modules/header-navigation';
 @import 'modules/list';
 @import 'modules/logo';
 @import 'modules/navigation';

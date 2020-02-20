@@ -2,6 +2,9 @@
 <languages>
   
   <language name="Swedish" id="SV">
-
+    <strings>
+      <toStartPageText>Till startsidan</toStartPageText>
+      <logInText>Logga in</logInText>
+    </strings>
   </language>
 </languages>

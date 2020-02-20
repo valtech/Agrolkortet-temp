@@ -1,0 +1,24 @@
+﻿@using Lantmannen.Helpers;
+@using EPiServer.Framework.Localization;
+
+<div class="header-navigation">
+
+    <a class="menu-button"></a>
+    <ul class="menu-list">
+        @Html.MenuList(ContentReference.StartPage,
+            @<li class="@(item.Selected ? "active" : null)">
+                @Html.PageLink(item.Page, null, new { @class = "link" })
+            </li>)
+    </ul>
+
+    <a href="@Url.ContentUrl(ContentReference.StartPage)" title=@LocalizationService.Current.GetString("/strings/toStartPageText")>
+        <img class="logo" src="~/dist/Agrolkortet2Theme/assets/img/logotype.png" />
+    </a>
+
+
+    <div class="login-wrapper">
+        <img src="~/dist/Agrolkortet2Theme/assets/img/icon-lock.svg" />
+        <p>@LocalizationService.Current.GetString("/strings/logInText")</p> 
+    </div>
+</div>
+

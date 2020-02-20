@@ -153,8 +153,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Lantmannen.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Lantmannen.Core.4.7.1\lib\Lantmannen.Core.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\Lantmannen.Core.4.7.13\lib\Lantmannen.Core.dll</HintPath>
     </Reference>
     <Reference Include="Lantmannen.Event, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Lantmannen.Event.4.8.0\lib\Lantmannen.Event.dll</HintPath>
@@ -366,6 +365,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="dist\assets\img\background-small.png" />
+    <Content Include="dist\assets\img\icon-close.svg" />
+    <Content Include="dist\assets\img\icon-lock.svg" />
+    <Content Include="dist\assets\img\icon-menu.svg" />
+    <Content Include="dist\assets\img\logotype.png" />
     <Content Include="dist\lib\ofi.min.js" />
     <Content Include="gulpfile.js" />
     <Content Include="Gulp\copy-binary.js" />
@@ -378,8 +382,9 @@
     <Content Include="Gulp\stylelint.js" />
     <Content Include="Gulp\styles.js" />
     <Content Include="Gulp\watch.js" />
-    <Content Include="Setup\Theme_sv.xml" />
+    <EmbeddedResource Include="Setup\Theme_sv.xml" />
     <Content Include="src\js\apps\CookieinfoHandler.js" />
+    <Content Include="src\js\apps\MobileHeaderMenu.js" />
     <Content Include="src\js\script.js" />
     <Content Include="package.nuspec">
       <SubType>Designer</SubType>
@@ -394,40 +399,41 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="package.json" />
-    <Content Include="Views\_Layout.cshtml" />
-    <Content Include="Views\_Footer.cshtml" />
-    <Content Include="Views\_Header.cshtml" />
-    <Content Include="src\scss\mixins\_buttons.scss" />
-    <Content Include="src\scss\mixins\_mediaqueries.scss" />
-    <Content Include="src\scss\mixins\_mixins.scss" />
-    <Content Include="src\scss\mixins\_object-fit.scss" />
-    <Content Include="src\scss\modules\_callout.scss" />
-    <Content Include="src\scss\modules\_content.scss" />
-    <Content Include="src\scss\modules\_cookie.scss" />
-    <Content Include="src\scss\modules\_forms.scss" />
-    <Content Include="src\scss\modules\_navigation.scss" />
-    <Content Include="src\scss\modules\_start-page.scss" />
-    <Content Include="src\scss\modules\_standard-page.scss" />
-    <Content Include="src\scss\main.scss" />
-    <Content Include="src\scss\modules\_banner.scss" />
-    <Content Include="src\scss\_base.scss" />
-    <Content Include="src\scss\_colors.scss" />
-    <Content Include="src\scss\_variables.scss" />
-    <Content Include="src\scss\_grid.scss" />
-    <Content Include="src\scss\_layout.scss" />
-    <Content Include="src\scss\_typography.scss" />
-    <Content Include="src\scss\modules\_article-page.scss" />
-    <Content Include="src\scss\modules\_breadcrumbs.scss" />
-    <Content Include="src\scss\modules\_list.scss" />
-    <Content Include="src\scss\modules\_logo.scss" />
-    <Content Include="Views\_BannerBlock.cshtml" />
-    <Content Include="Views\_BannerBlockImage.cshtml" />
     <Content Include="Views\_BreadcrumbsBlock.cshtml" />
     <Content Include="Views\_CalloutBlock.cshtml" />
     <Content Include="Views\_ContentBlock.cshtml" />
+    <Content Include="Views\_Footer.cshtml" />
+    <Content Include="Views\_Header.cshtml" />
+    <Content Include="Views\_HeaderNavigation.cshtml" />
+    <Content Include="Views\_Layout.cshtml" />
     <Content Include="Views\_LogoBlock.cshtml" />
     <Content Include="Views\_NavigationBlock.cshtml" />
     <Content Include="Views\_NavigationTree.cshtml" />
+    <Content Include="src\scss\mixins\_buttons.scss" />
+    <Content Include="src\scss\mixins\_grid.scss" />
+    <Content Include="src\scss\mixins\_mediaqueries.scss" />
+    <Content Include="src\scss\mixins\_mixins.scss" />
+    <Content Include="src\scss\mixins\_object-fit.scss" />    
+    <Content Include="src\scss\modules\_article-page.scss" />
+    <Content Include="src\scss\modules\_banner.scss" />
+    <Content Include="src\scss\modules\_breadcrumbs.scss" />
+    <Content Include="src\scss\modules\_callout.scss" />
+    <Content Include="src\scss\modules\_content.scss" />
+    <Content Include="src\scss\modules\_cookie.scss" />
+    <Content Include="src\scss\modules\_file-list.scss" />
+    <Content Include="src\scss\modules\_forms.scss" />
+    <Content Include="src\scss\modules\_logo.scss" />
+    <Content Include="src\scss\modules\_header-navigation.scss" />
+    <Content Include="src\scss\modules\_navigation.scss" />
+    <Content Include="src\scss\modules\_start-page.scss" />
+    <Content Include="src\scss\main.scss" />
+    <Content Include="src\scss\_base.scss" />
+    <Content Include="src\scss\_colors.scss" />
+    <Content Include="src\scss\_layout.scss" />
+    <Content Include="src\scss\_typography.scss" />
+    <Content Include="src\scss\_variables.scss" />
+
+
     <Content Include="dist\assets\fonts\LantmannenSans-Black.eot" />
     <Content Include="dist\assets\fonts\LantmannenSans-Black.woff" />
     <Content Include="dist\assets\fonts\LantmannenSans-Black.woff2" />
