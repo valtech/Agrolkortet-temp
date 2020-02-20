@@ -1,4 +1,5 @@
 ﻿@using Lantmannen.Helpers;
+@using EPiServer.Framework.Localization;
 
 <div class="header-navigation">
 
@@ -10,14 +11,14 @@
             </li>)
     </ul>
 
-    <a href="@Url.ContentUrl(ContentReference.StartPage)" title="Till startsidan" @*TODO: Översättningsfil*@>
+    <a href="@Url.ContentUrl(ContentReference.StartPage)" title=@LocalizationService.Current.GetString("/strings/toStartPageText")>
         <img class="logo" src="~/dist/Agrolkortet2Theme/assets/img/logotype.png" />
     </a>
 
 
     <div class="login-wrapper">
         <img src="~/dist/Agrolkortet2Theme/assets/img/icon-lock.svg" />
-        <p>Logga in@*Lägg i översättningsfil*@</p> 
+        <p>@LocalizationService.Current.GetString("/strings/logInText")</p> 
     </div>
 </div>
 

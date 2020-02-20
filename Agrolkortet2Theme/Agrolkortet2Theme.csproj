@@ -382,7 +382,7 @@
     <Content Include="Gulp\stylelint.js" />
     <Content Include="Gulp\styles.js" />
     <Content Include="Gulp\watch.js" />
-    <Content Include="Setup\Theme_sv.xml" />
+    <EmbeddedResource Include="Setup\Theme_sv.xml" />
     <Content Include="src\js\apps\CookieinfoHandler.js" />
     <Content Include="src\js\apps\MobileHeaderMenu.js" />
     <Content Include="src\js\script.js" />
