@@ -21,38 +21,107 @@
 		background-repeat: no-repeat;
 		position: relative;
 		z-index: 10;
+
+		@include for-tablet-and-up {
+			width: 90px;
+			height: 90px;
+			background-size: 44px;
+		}
+
+		@include for-desktop-and-up {
+			display: none;
+		}
 	}
 
 	.menu-list {
 		display: none;
+		position: absolute;
+		padding-inline-start: 0px;
+		margin-block-end: 0px;
+		list-style-type: none;
+		text-align: center;
+		z-index: 5;
+
+		a {
+			text-decoration: none;
+			color: $color-black;
+			font-size: 23px;
+			line-height: 3;
+			letter-spacing: 0.58px;
+			font-weight: 1000;
+		}
+
+		.active {
+			a {
+				color: $color-blue-nice;
+				border-bottom: 3px solid $color-blue-lightest-power
+			}
+		}
+
+		@include for-desktop-and-up {
+			display: inline;
+			left: 200px;
+
+			li {
+				display: inline;
+				padding-right: 30px;
+			}
+		}
 	}
 
 
 	.logo {
-		background-position: center;
-		background-image: url(assets/img/logotype.png);
-		background-repeat: no-repeat;
-		width: 60px;
-		height: 60px;
-		background-size: 100%;
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
 		z-index: 10;
+		width: 60px;
+		height: 60px;
+		background-position: center;
+		background-image: url(assets/img/logotype.png);
+		background-repeat: no-repeat;
+		background-size: 100%;
+
+		@include for-tablet-and-up {
+			height: 115px;
+			width: 115px;
+		}
+
+		@include for-desktop-and-up {
+			left: 115px;
+		}
 	}
 
 	.login-wrapper {
-		min-width: 20px;
-		width: 99px;
-		height: 44px;
-		background: $color-blue-nice;
-		border-radius: 15px;
-		padding: 8px 15px;
-		color: white;
-		font-size: 1.2rem;
-		font-weight: 600;
-		white-space: nowrap;
-		/*TODO: media query show before element with icon on desktop*/
+		@include primary-btn;
+		margin: 0;
+		display: flex;
+		align-items: center;
+		z-index: 5;
+
+		img {
+			display: none;
+		}
+
+		p {
+			margin-block-start: 0;
+			margin-block-end: 0;
+			line-height: $login-icon-height;
+		}
+
+		@include for-tablet-and-up {
+			align-self: flex-end;
+
+			img {
+				display: block;
+				width: 17px;
+				height: $login-icon-height;
+			}
+
+			p {
+				padding-left: 9px;
+			}
+		}
 	}
 }
 
@@ -65,25 +134,17 @@
 		display: none;
 	}
 
-	.menu-list {
-		position: absolute;
-		padding-inline-start: 0px;
-		padding-top: 120px;
-		width: 100%;
-		height: 100%;
-		margin: 0 auto;
-		display: block;
-		list-style-type: none;
-		text-align: center;
+	.menu-button {
+		background-image: url(assets/img/icon-close.svg);
+	}
 
-		a {
-			text-decoration: none;
-			color: $color-black;
-			font-size: 23px;
-			line-height: 3;
-			letter-spacing: 0.58px;
-			font-weight: 1000;
-		}
-		
+	.menu-list {
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		padding-inline-start: 0px;
+		margin-block-end: 0px;
+		padding-top: 120px;
 	}
 }

@@ -444,6 +444,9 @@
     <Content Include="dist\assets\fonts\LantmannenSans-Regular.woff2" />
     <Content Include="Views\_HeaderNavigation.cshtml" />
     <Content Include="src\scss\modules\_header-navigation.scss" />
+    <Content Include="src\scss\_variables.scss" />
+    <Content Include="src\scss\mixins\_grid.scss" />
+    <Content Include="src\scss\modules\_banner.scss" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
