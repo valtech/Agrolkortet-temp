@@ -385,6 +385,7 @@
     <EmbeddedResource Include="Setup\Theme_sv.xml" />
     <Content Include="src\js\apps\CookieinfoHandler.js" />
     <Content Include="src\js\apps\MobileHeaderMenu.js" />
+    <Content Include="src\js\apps\ResponsiveTables.js" />
     <Content Include="src\js\script.js" />
     <Content Include="package.nuspec">
       <SubType>Designer</SubType>
@@ -426,6 +427,7 @@
     <Content Include="src\scss\modules\_header-navigation.scss" />
     <Content Include="src\scss\modules\_navigation.scss" />
     <Content Include="src\scss\modules\_start-page.scss" />
+    <Content Include="src\scss\modules\_table.scss" />
     <Content Include="src\scss\main.scss" />
     <Content Include="src\scss\_base.scss" />
     <Content Include="src\scss\_colors.scss" />

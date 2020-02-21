@@ -4,11 +4,13 @@
 @{
     Layout = "_Layout.cshtml";
     var pageHasImageAndTitle = Model.Has(Model.Current.StandardImage) && Model.Has(Model.Current.StandardTitle);
+    var pageIsStartPage = Model.Has(Model.Current.Style) && Model.Current.Style.Contains("start-page");
+    var pageIsArticlePage = Model.Has(Model.Current.Style) && Model.Current.Style.Contains("article-page");
 }
 
 <main>
     <section class="feature-area">
-        @if (pageHasImageAndTitle)
+        @if (pageHasImageAndTitle && pageIsStartPage)
         {
             <div class="banner">
                 <picture class="banner-image">
@@ -21,8 +23,8 @@
                 </picture>
                 <div class="banner-overlay">
                     <div class="banner-text-box">
-                        <h1 class="banner-title">
-                            @Html.PropertyFor(m => m.Current.StandardTitle)
+                        <h1 class="banner-title" @Html.EditAttributes(m => m.Current.StandardTitle)>
+                            @Html.Raw(Model.Current.StandardTitle)
                         </h1> 
 
                         @if (Model.Has(Model.Current.StandardPreamble))
@@ -53,12 +55,49 @@
             @if (Model.Has(Model.Current.StandardPreamble) || Model.Has(Model.Current.StandardBody))
             {
                 <div class="container">
+                    @if (pageIsArticlePage) 
+                    {   
+                        <h1 class="content-title" @Html.EditAttributes(m => m.Current.StandardTitle)>
+                            @Html.Raw(Model.Current.StandardTitle)
+                        </h1>
+                    }
                     <div class="content-wrapper">
-                        @if (Model.Has(Model.Current.StandardBody))
+                        @if(pageIsArticlePage)
                         {
-                            <div class="content-body">
-                                @Html.PropertyFor(m => m.Current.StandardBody)
+                            if (Model.Has(Model.Current.StandardImage)) {
+                                <div class="content-top-image">
+                                    <picture>
+                                        <souce srcset="@Url.ContentUrl(Model.Current.StandardImage)?maxwidth=1600" media="(min-width: 1366px)">
+                                        <source srcset="@Url.ContentUrl(Model.Current.StandardImage)?maxwidth=1366" media="(min-width: 768px)">
+                                        <img srcset="@Url.GetCropUrl(Model.Current.StandardImage, 500, 350)">
+                                    </picture>
+                                </div>
+                            }
+
+                            <div class="text-wrapper">
+                                @if (Model.Has(Model.Current.StandardPreamble))
+                                {
+                                    <div class="content-preamble @(Model.Has(Model.Current.StandardImage) ? "content-preamble--below-image" : "")">
+                                        @Html.PropertyFor(m => m.Current.StandardPreamble)
+                                    </div>
+                                }
+
+                                @if (Model.Has(Model.Current.StandardBody))
+                                {
+                                    <div class="content-body">
+                                        @Html.PropertyFor(m => m.Current.StandardBody)
+                                    </div>
+                                }
                             </div>
+                        } 
+                        else 
+                        {
+                            if (Model.Has(Model.Current.StandardBody))
+                            {
+                                <div class="content-body">
+                                    @Html.PropertyFor(m => m.Current.StandardBody)
+                                </div>
+                            }
                         }
                     </div>
                 </div>

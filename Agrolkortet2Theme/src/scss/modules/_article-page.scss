@@ -1,3 +1,96 @@
 ﻿.article-page {
+    main {
+        padding-top: $header-height;
+
+        @include for-tablet-and-up {
+            padding-top: calc(#{$header-height} + 3rem);
+        }
+
+        .container {
+            @include for-phone-only {
+                margin: 0;
+            }
+        }
+    }
+
+    .container {
+        .content-top-image{
+            margin: auto;
     
+            @include for-tablet-and-up {
+                width: 80%;
+            }
+        }
+
+        .content-wrapper {
+            padding: $base-padding 0;
+
+            @include for-tablet-and-up {
+                padding: $base-padding;
+            }
+        }
+
+        .text-wrapper {
+            display: flex;
+            flex-direction: column;
+
+            @include for-tablet-and-up {
+                flex-direction: row;
+            }
+        }
+
+        .content-title {
+            max-width: $container-width;
+            margin: 1rem auto 2rem;
+
+            @include for-phone-only {
+                padding: 0 $base-padding;
+            }
+
+            em {
+                color: $color-blue-nice;
+                font-style: normal;
+            }
+        }
+    
+        .content-preamble {
+            background: $color-blue-light-soft;
+            color: $color-white;
+            flex-basis: 30%;
+            padding: $base-padding calc(2 * #{$base-padding});
+            position: relative;
+            top: -2rem;
+            left: -1rem;
+            min-width: 270px;
+            margin-bottom: auto;
+
+            @include for-desktop-and-up {
+                margin: $base-margin;
+                left: -3rem;
+                top: -3rem;
+                margin-bottom: auto;
+            }
+
+            &--below-image {
+                @include for-desktop-and-up {
+                    top: -6rem;
+                }
+            }
+
+            p {
+                @extend %preamble;
+            }
+        }
+
+        .content-body {
+            margin: 0;
+            padding: 0 $base-padding;
+
+            @include for-tablet-and-up {
+                width: 60%;
+                margin: 2rem 1rem;
+                padding: 0;
+            }
+        }
+    }
 }

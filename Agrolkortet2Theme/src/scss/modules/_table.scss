@@ -1,0 +1,101 @@
+.table-wrapper {
+    display: block;
+    position: relative;
+    max-width: 100%;
+    padding-bottom: 25px;
+
+    &:after {
+        content: '';
+        display: none;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 40px;
+    }
+
+    &:after {
+        right: 0;
+        background: linear-gradient(to right, $color-transparent-full 0%, $color-transparent-none 100%);
+    }
+
+    &.fade-right {
+        &:after {
+            display: block;
+        }
+    }
+
+    &--inner {
+        display: block;
+        max-width: 100%;
+        overflow-x: auto;
+    }
+}
+
+
+//Straight from old agrolkortet theme:
+table {
+    background-color: $color-transparent-full;
+}
+
+th {
+    text-align: left;
+}
+
+
+thead {
+    tr {
+        border-top: 1px solid $color-tableborder;
+
+        &:nth-child(odd) {
+            background-color: transparent;
+        }
+    }
+}
+
+th {
+    padding: 8px 30px 10px;
+    vertical-align: top;
+
+    @include for-phone-only {
+        padding: 10px;
+    }
+}
+
+td {
+    padding: 8px 30px 10px;
+    vertical-align: top;
+    border: none;
+
+    @include for-phone-only {
+        padding: 10px;
+    }
+}
+
+tr {
+    border-bottom: 1px solid $color-tableborder;
+
+    &:nth-child(odd) {
+        background-color: $color-tablerow-alternate;
+    }
+}
+
+td,
+th {
+    font-size: 1rem;
+}
+
+
+tr {
+    border-bottom: 1px solid $color-tableborder;
+
+    &:nth-child(odd) {
+        background-color: $color-tablerow-alternate;
+    }
+}
+
+table, tbody, td {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: none;
+}
+  
