@@ -1,24 +1,80 @@
 ﻿.callout {
     width: 100%;
+    max-width: 1200px;
+    margin: auto;
 
     a {
+        display: flex;
+        flex-direction: column;
         text-decoration: none;
+
+        @include for-tablet-and-up {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__image-wrapper {
+        flex: 1;
+
+        @include for-tablet-and-up {
+            padding: 2rem;
+        }
     }
     
     &__body {
-        padding: $base-padding;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+        padding: 1rem;
         text-decoration: none;
         color: $color-text;
         text-align: center;
+
+        @include for-tablet-and-up {
+            padding: 2rem;
+            text-align: left;
+        }
     }
 
     &__title {
         @extend h4;
         margin-top: 0;
         text-decoration: none;
+        max-width: 500px;
+    }
+
+    &__text {
+        max-width: 500px;
     }
 
     &__button {
         @include secondary-btn;
+    }
+}
+
+
+.list {
+    .callout {
+        a {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__body {
+            text-align: center;
+        }
+
+        &__image-wrapper {
+            padding: 0;
+        }
+
+        &__title {
+            max-width: none;
+        }
+
+        &__text {
+            max-width: none;
+        }
     }
 }
