@@ -3,7 +3,7 @@
 <div class="callout @Model.Current.Style">
     @if (Model.Has(Model.Current.Link))
     {
-        @:<a class="callout__link" href="@Url.ContentUrl(Model.Current.Link.ToString())">
+        @:<a class="callout__link callout__wrapper" href="@Url.ContentUrl(Model.Current.Link.ToString())">
     }
 
         @if (Model.Has(Model.Current.Image))
@@ -11,16 +11,18 @@
             <img class="callout-image" srcset="@Url.ContentUrl(Model.Current.Image)" alt="@Model.ImageDescription">
         }
 
-        @if (Model.Has(Model.Current.Title))
-        {
-            <h3 class="callout__title">@Model.Current.Title</h3>
-        }
-        <div class="callout__text">@Html.PropertyFor(m => m.Current.Body)</div>
+        <div class="callout__body">
+            @if (Model.Has(Model.Current.Title))
+            {
+                <h3 class="callout__title">@Model.Current.Title</h3>
+            }
+            <div class="callout__text">@Html.PropertyFor(m => m.Current.Body)</div>
 
-        @if (Model.Has(Model.Current.Link))
-        {
-            <span class="callout__button" href="@Url.ContentUrl(Model.Current.Link.ToString())">@Model.Current.LinkText</span>
-        }
+            @if (Model.Has(Model.Current.Link))
+            {
+                <span class="callout__button" href="@Url.ContentUrl(Model.Current.Link.ToString())">@Model.Current.LinkText</span>
+            }
+        </div>
     
     @if (Model.Has(Model.Current.Link))
     {

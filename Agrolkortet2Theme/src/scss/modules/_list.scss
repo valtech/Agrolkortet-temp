@@ -15,5 +15,88 @@
         a {
             @include secondary-btn;
         }
-    } 
+    }
+
+    .list-title,
+    .list-description {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+.list--white-background {
+    background: white;
+    max-width: none;
+
+    .list-wrapper > div {
+        padding: 0 $half-grid-gap;
+    }
+}
+
+
+.list--white-teasers {
+    .callout {
+        background: white;
+        box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.05);
+    }
+}
+
+.list--single-row {
+    .list-wrapper {
+        > div {
+            flex-wrap: nowrap;
+        }
+    }
+
+    > div > div {
+        flex: 1;
+        flex-basis: auto;
+    }
+}
+
+.list--ping-pong {
+    @include for-tablet-and-up {
+        .list-wrapper{
+            > div > div {
+                .callout__wrapper {
+                    flex-direction: row;
+    
+                    .callout__body {
+                        text-align: left;
+                    }
+    
+                    .callout__title,
+                    .callout__text,
+                    .callout__button {
+                        @include for-desktop-and-up {
+                            margin-right: 3rem;
+                        }
+                    }
+                }
+    
+                &:nth-child(even) {
+                    .callout__wrapper {
+                        flex-direction: row-reverse;
+    
+                        .callout__title,
+                        .callout__text,
+                        .callout__button {
+                            @include for-desktop-and-up {
+                                margin-left: 3rem;
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .callout {
+            margin-bottom: 3rem;
+        }
+    
+        .callout__image-wrapper {
+            flex: 0.9;
+        }
+    }
 }
