@@ -33,6 +33,13 @@ namespace Lantmannen.Agrolkortet2Theme.Setup
 
                 // page wrapper
                 yield return new ThemeStyle("StandardPage", ThemeStyleKeys.PageTypeWrapper, "standard-page");
+
+                //List styles
+                yield return new ThemeStyle("ListBlock", "Standard - Grey background", string.Empty, true);
+                yield return new ThemeStyle("ListBlock", "White background", "list--white-background");
+                yield return new ThemeStyle("ListBlock", "White teasers", "list--white-teasers");
+                yield return new ThemeStyle("ListBlock", "Ping Pong", "list--ping-pong");
+                yield return new ThemeStyle("ListBlock", "Adaptable columns, single row - Use with 1-column list", "list--single-row");
             }
         }
     }
