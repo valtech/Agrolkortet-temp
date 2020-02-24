@@ -42,15 +42,21 @@
 }
 
 .list--single-row {
-    .list-wrapper {
-        > div {
-            flex-wrap: nowrap;
+    @include for-tablet-and-up {
+        .list-wrapper {
+            > div {
+                flex-wrap: nowrap;
+            }
         }
-    }
+    
+        > div > div {
+            flex: 1;
+            flex-basis: auto;
+        }
 
-    > div > div {
-        flex: 1;
-        flex-basis: auto;
+        .callout__body {
+            padding: 0.5rem;
+        }
     }
 }
 
