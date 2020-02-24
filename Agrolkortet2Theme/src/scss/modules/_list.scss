@@ -1,10 +1,9 @@
 ﻿.list {
     @include container;
-    padding: $base-padding;
     text-align: center;
 
-    &-wrapper {
-        margin: 0 - $half-grid-gap;
+    @include for-tablet-and-up {
+        padding: $half-grid-gap;
     }
 
     &-link {
@@ -21,16 +20,13 @@
     .list-description {
         max-width: 800px;
         margin: 0 auto;
+        padding: $base-padding;
     }
 }
 
 .list--white-background {
     background: white;
     max-width: none;
-
-    .list-wrapper > div {
-        padding: 0 $half-grid-gap;
-    }
 }
 
 
@@ -44,12 +40,10 @@
 .list--single-row {
     @include for-tablet-and-up {
         .list-wrapper {
-            > div {
-                flex-wrap: nowrap;
-            }
+            flex-wrap: nowrap;
         }
     
-        > div > div {
+        .callout {
             flex: 1;
             flex-basis: auto;
         }
@@ -63,12 +57,19 @@
 .list--ping-pong {
     @include for-tablet-and-up {
         .list-wrapper{
-            > div > div {
+            .callout {
                 .callout__wrapper {
                     flex-direction: row;
     
                     .callout__body {
-                        text-align: left;
+                        padding: 2rem;
+                        text-align: center;
+                        align-items: center;
+                        
+                        @include for-tablet-and-up {
+                            text-align: left;
+                            align-items: flex-start;
+                        }
                     }
     
                     .callout__title,

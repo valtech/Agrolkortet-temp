@@ -407,6 +407,7 @@
     <Content Include="Views\_Header.cshtml" />
     <Content Include="Views\_HeaderNavigation.cshtml" />
     <Content Include="Views\_Layout.cshtml" />
+    <Content Include="Views\_ListBlock.cshtml" />
     <Content Include="Views\_LogoBlock.cshtml" />
     <Content Include="Views\_NavigationBlock.cshtml" />
     <Content Include="Views\_NavigationTree.cshtml" />

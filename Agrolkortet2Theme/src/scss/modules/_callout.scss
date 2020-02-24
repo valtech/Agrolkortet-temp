@@ -15,9 +15,10 @@
 
     &__image-wrapper {
         flex: 1;
+        padding: calc(#{$base-padding} / 2);
 
         @include for-tablet-and-up {
-            padding: 2rem;
+            padding: $base-padding;
         }
     }
     
@@ -25,6 +26,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         flex: 1;
         padding: 1rem;
         text-decoration: none;
@@ -34,6 +36,7 @@
         @include for-tablet-and-up {
             padding: 2rem;
             text-align: left;
+            align-items: flex-start;
         }
     }
 
@@ -50,6 +53,7 @@
 
     &__button {
         @include secondary-btn;
+        margin: 1rem 0;
     }
 }
 
@@ -63,6 +67,9 @@
 
         &__body {
             text-align: center;
+            justify-content: center;
+            align-items: center;
+            padding: calc(#{$base-padding} / 2) $base-padding;
         }
 
         &__image-wrapper {
