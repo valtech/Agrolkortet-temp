@@ -447,6 +447,7 @@
     <Content Include="src\scss\_variables.scss" />
     <Content Include="src\scss\mixins\_grid.scss" />
     <Content Include="src\scss\modules\_banner.scss" />
+    <Content Include="Views\_BreadcrumbsPartialView.cshtml" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
