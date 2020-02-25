@@ -1,22 +1,20 @@
 .list-wrapper {
-    & > div {
-        @include container;
-        @include grid-container();
-    }
+    @include container;
+    @include grid-container();
 
-    &.list-onecolumn > div > div {
+    &.list-onecolumn > div {
         @include grid-column(1);
     }
 
-    &.list-twocolumn > div > div {
+    &.list-twocolumn > div {
         @include grid-column(2);
     }
 
-    &.list-threecolumn > div > div {
+    &.list-threecolumn > div {
         @include grid-column(3);
     }
 
-    &.list-fourcolumn > div > div {
+    &.list-fourcolumn > div {
         @include grid-column(4);
     }
 }

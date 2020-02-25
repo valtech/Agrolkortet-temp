@@ -365,12 +365,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dist\assets\img\background-small.png" />
     <Content Include="dist\assets\img\icon-check.svg" />
     <Content Include="dist\assets\img\icon-close-white.svg" />
     <Content Include="dist\assets\img\icon-close-black.svg" />
     <Content Include="dist\assets\img\icon-lock.svg" />
     <Content Include="dist\assets\img\icon-menu.svg" />
+    <Content Include="dist\assets\img\icon-check.svg" />
+    <Content Include="dist\assets\img\icon-phone.svg" />
+    <Content Include="dist\assets\img\icon-arrow.svg" />
+    <Content Include="dist\assets\img\swosh.svg" />
     <Content Include="dist\assets\img\logotype.png" />
     <Content Include="dist\lib\ofi.min.js" />
     <Content Include="gulpfile.js" />
@@ -410,6 +413,7 @@
     <Content Include="Views\_Header.cshtml" />
     <Content Include="Views\_HeaderNavigation.cshtml" />
     <Content Include="Views\_Layout.cshtml" />
+    <Content Include="Views\_ListBlock.cshtml" />
     <Content Include="Views\_LogoBlock.cshtml" />
     <Content Include="Views\_NavigationBlock.cshtml" />
     <Content Include="Views\_NavigationTree.cshtml" />
