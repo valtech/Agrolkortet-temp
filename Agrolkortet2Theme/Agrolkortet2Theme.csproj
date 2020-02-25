@@ -367,7 +367,8 @@
   <ItemGroup>
     <Content Include="dist\assets\img\background-small.png" />
     <Content Include="dist\assets\img\icon-check.svg" />
-    <Content Include="dist\assets\img\icon-close.svg" />
+    <Content Include="dist\assets\img\icon-close-white.svg" />
+    <Content Include="dist\assets\img\icon-close-black.svg" />
     <Content Include="dist\assets\img\icon-lock.svg" />
     <Content Include="dist\assets\img\icon-menu.svg" />
     <Content Include="dist\assets\img\logotype.png" />
