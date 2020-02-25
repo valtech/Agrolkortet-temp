@@ -32,3 +32,11 @@ img {
     position: relative;
     height: 100%;
 }
+
+.container-full {
+	header {
+		.container {
+			@include container;
+		}
+	}
+}
