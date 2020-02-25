@@ -159,6 +159,9 @@
       <HintPath>..\packages\Lantmannen.Event.4.8.0\lib\Lantmannen.Event.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Lantmannen.FAQ, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lantmannen.FAQ.1.0.4\lib\Lantmannen.FAQ.dll</HintPath>
+    </Reference>
     <Reference Include="Lantmannen.Favicon, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Lantmannen.Favicon.4.8.0\lib\Lantmannen.Favicon.dll</HintPath>
       <Private>True</Private>
