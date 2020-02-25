@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="574px" height="680px" viewBox="0 0 574 680" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Group 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0.581640602" y="0" width="693" height="745"></rect>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="footer" transform="translate(-1106.000000, -172.000000)">
+            <g id="Group-5" transform="translate(0.000000, 17.000000)">
+                <g transform="translate(997.418359, 93.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Mask"></g>
+                    <g mask="url(#mask-2)" fill="#6CADDF">
+                        <g transform="translate(653.614264, 1041.905013) rotate(-307.000000) translate(-653.614264, -1041.905013) translate(-682.885736, 197.405013)">
+                            <path d="M2408.70827,0.0373030993 L2408.70827,1615.9522 L175.095537,1615.96947 C543.246607,1536.2344 819.027099,1208.93104 819.027099,817.281618 C819.027099,365.930046 452.759518,0.0373030993 0.945560126,0.0373030993 L2408.70827,0.0373030993 Z" id="Combined-Shape" fill-opacity="0.25"></path>
+                            <path d="M2475.75033,21.6192034 L2475.75033,1637.5341 L242.137594,1637.55137 C610.288663,1557.8163 886.069156,1230.51294 886.069156,838.863519 C886.069156,387.511947 519.801575,21.6192034 67.9876164,21.6192034 L2475.75033,21.6192034 Z" id="Combined-Shape-Copy" fill-opacity="0.55"></path>
+                            <path d="M2566.14778,32.9561557 L2566.14778,1648.87105 L332.53505,1648.88833 C700.686119,1569.15325 976.466612,1241.84989 976.466612,850.200471 C976.466612,398.848899 610.199031,32.9561557 158.385073,32.9561557 L2566.14778,32.9561557 Z" id="Combined-Shape-Copy-2" fill-opacity="0.57"></path>
+                            <path d="M2672.81335,72.9354549 L2672.81335,1688.85035 L439.200612,1688.86763 C807.351681,1609.13255 1083.13217,1281.82919 1083.13217,890.17977 C1083.13217,438.828198 716.864593,72.9354549 265.050634,72.9354549 L2672.81335,72.9354549 Z" id="Combined-Shape-Copy-3" fill-opacity="0.75"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

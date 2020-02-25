@@ -365,10 +365,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dist\assets\img\background-small.png" />
     <Content Include="dist\assets\img\icon-close.svg" />
     <Content Include="dist\assets\img\icon-lock.svg" />
     <Content Include="dist\assets\img\icon-menu.svg" />
+    <Content Include="dist\assets\img\icon-check.svg" />
+    <Content Include="dist\assets\img\icon-phone.svg" />
+    <Content Include="dist\assets\img\icon-arrow.svg" />
+    <Content Include="dist\assets\img\swosh.svg" />
     <Content Include="dist\assets\img\logotype.png" />
     <Content Include="dist\lib\ofi.min.js" />
     <Content Include="gulpfile.js" />
