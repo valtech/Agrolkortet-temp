@@ -54,6 +54,30 @@
     &__button {
         @include secondary-btn;
         margin: 1rem 0;
+
+        &[href^="tel:"] {
+            border: none;
+            background: none; 
+            font-size: 1.6rem;
+            position: relative;
+
+            &:hover {
+                color: lighten($color-button, 5%);
+            }
+
+            &:before {
+                content: "";
+                background-image: url(assets/img/icon-phone.svg);
+                width: 20px;
+                display: block;
+                height: 45px;
+                position: absolute;
+                left: -15px;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                top: 8px;
+            }
+        }
     }
 }
 
@@ -67,7 +91,7 @@
 
         &__body {
             text-align: center;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             padding: calc(#{$base-padding} / 2) $base-padding;
         }
