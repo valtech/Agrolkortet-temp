@@ -37,6 +37,7 @@ img {
 	header {
 		.container {
 			@include container;
+			position: relative;
 		}
 	}
 }

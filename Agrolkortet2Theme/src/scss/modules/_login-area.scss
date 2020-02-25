@@ -1,11 +1,15 @@
 ﻿.header-login {
 	display: none;
+}
+
+.overlay {
+	display: none;
 	background: rgba(0, 0, 0, .25);
 	opacity: 0;
 	-webkit-transition: opacity .25s ease;
 }
 
-.login-open {
+.overlay-active {
 	display: block;
 	position: fixed;
 	padding: 0;
@@ -17,10 +21,18 @@
 	height: 100%;
 	opacity: 1;
 	z-index: 20;
+}
 
+.login-open {
+	display: block;
+	position: absolute;
+	right: 1rem; // TODO: Variabel
+	max-width: none;
+	width: auto;
+	opacity: 1;
+	z-index: 20;
 
 	.content__body {
-		position: absolute;
 		max-height: 100%;
 		max-width: 400px;
 		padding: 20px;
@@ -64,6 +76,7 @@
 
 	.closeBtn {
 		@include primary-btn;
+		position: relative;
 		width: 44px;
 		height: 44px;
 		border-radius: 50%;
@@ -72,8 +85,6 @@
 		background-image: url(assets/img/icon-close.svg);
 		background-repeat: no-repeat;
 		background-size: 22px;
-		position: relative;
-		float: right;
 		z-index: 25;
 	}
 }

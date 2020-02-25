@@ -1,27 +1,39 @@
 ﻿window.Agrolkortet2Theme = window.Agrolkortet2Theme || {};
 
 (function (app) {
+	var overlay = document.querySelector(".overlay");
 	var loginArea = document.querySelector(".header-login");
-	var button = header.querySelector(".login-button");
+	var content = loginArea.querySelector(".content__body");
+	var button = document.querySelector(".login-button");
 
 	var closeBtn = document.createElement("div");
 	closeBtn.classList.add("closeBtn");
-	loginArea.appendChild(closeBtn);
+	content.appendChild(closeBtn);
 
 	button.addEventListener("click", function (e) {
 		e.preventDefault();
-		loginArea.classList.add("login-open");
+		openLogin();
 	}, false);
 
 	closeBtn.addEventListener("click", function (e) {
-		loginArea.classList.remove("login-open");
+		closeLogin();
 	}, false);
 
-	loginArea.addEventListener("click", function (e) {
-		// Prevents click on child elements
-		if (e.target !== this) return;
-
-		loginArea.classList.remove("login-open");
+	overlay.addEventListener("click", function (e) {
+		closeLogin();
 	}, false);
+
+	function openLogin() {
+		loginArea.classList.add("login-open");
+		const buttonOffsetRight = button.offsetLeft + button.offsetWidth;
+		//loginArea.style.left = (buttonOffsetRight - (loginArea.clientWidth / 2)) + "px";
+		loginArea.style.top = button.offsetTop + button.offsetHeight + "px";
+		overlay.classList.add("overlay-active");
+	}
+
+	function closeLogin() {
+		loginArea.classList.remove("login-open");
+		overlay.classList.remove("overlay-active");
+	}
 
 })(window.Agrolkortet2Theme);
