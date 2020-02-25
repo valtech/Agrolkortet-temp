@@ -1,10 +1,9 @@
 ﻿.list {
     @include container;
-    padding: $base-padding;
     text-align: center;
 
-    &-wrapper {
-        margin: 0 - $half-grid-gap;
+    @include for-tablet-and-up {
+        padding: $half-grid-gap;
     }
 
     &-link {
@@ -15,5 +14,97 @@
         a {
             @include secondary-btn;
         }
-    } 
+    }
+
+    .list-title,
+    .list-description {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: $base-padding;
+    }
+}
+
+.list--white-background {
+    background: white;
+    max-width: none;
+}
+
+
+.list--white-teasers {
+    .callout {
+        background: white;
+        box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.05);
+    }
+}
+
+.list--single-row {
+    @include for-tablet-and-up {
+        .list-wrapper {
+            flex-wrap: nowrap;
+        }
+    
+        .callout {
+            flex: 1;
+            flex-basis: auto;
+        }
+
+        .callout__body {
+            padding: 0.5rem;
+        }
+    }
+}
+
+.list--ping-pong {
+    @include for-tablet-and-up {
+        .list-wrapper{
+            .callout {
+                .callout__wrapper {
+                    flex-direction: row;
+    
+                    .callout__body {
+                        padding: 2rem;
+                        text-align: center;
+                        align-items: center;
+                        
+                        @include for-tablet-and-up {
+                            text-align: left;
+                            align-items: flex-start;
+                            justify-content: center;
+                        }
+                    }
+    
+                    .callout__title,
+                    .callout__text,
+                    .callout__button {
+                        @include for-desktop-and-up {
+                            margin-right: 3rem;
+                        }
+                    }
+                }
+    
+                &:nth-child(even) {
+                    .callout__wrapper {
+                        flex-direction: row-reverse;
+    
+                        .callout__title,
+                        .callout__text,
+                        .callout__button {
+                            @include for-desktop-and-up {
+                                margin-left: 3rem;
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .callout {
+            margin-bottom: 3rem;
+        }
+    
+        .callout__image-wrapper {
+            flex: 0.9;
+        }
+    }
 }

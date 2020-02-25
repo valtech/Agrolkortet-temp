@@ -25,8 +25,6 @@
 
 	function openLogin() {
 		loginArea.classList.add("login-open");
-		//const buttonOffsetRight = button.offsetLeft + button.offsetWidth;
-		//loginArea.style.left = (buttonOffsetRight - (loginArea.clientWidth / 2)) + "px";
 		loginArea.style.top = button.offsetTop + "px";
 		overlay.classList.add("overlay-active");
 	}

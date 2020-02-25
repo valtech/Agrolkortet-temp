@@ -1,0 +1,162 @@
+@using X.PagedList.Mvc
+@model ListBlockViewModel
+@Model.Start(this)
+
+<div class="list @Model.Current.Style">
+    @if (Model.Has(Model.Current.Title))
+    {
+        <h3 class="list-title">@Model.Current.Title</h3>
+    }
+
+    @if (Model.Has(Model.Current.Description))
+    {
+        <div class="list-description">
+            @Html.PropertyFor(x => x.Current.Description)
+        </div>    
+    }
+
+    <div class="list-wrapper list-@Model.Layout" data-cols="@Model.Current.Layout">
+        @if (Model.IsDynamic)
+        {
+            if (Model.ShowCategoryFilterForm)
+            {
+                <form method="POST" class="list-categoryfilterwrap">
+                    <div class="list-categoryfilter">
+                        @if (Model.ShowCategoryFilter1)
+                        {
+                            <div class="list-categoryfilter-item list-categoryfilter-item-@Model.CategoryFilterCount">
+                                <select class="list-categoryfilter-category" name="c1">
+                                    @foreach (var item in Model.CategoryFilter1)
+                                    {
+                                        if (item.IsSelected)
+                                        {
+                                            <option value="@item.Id" selected="selected">@item.Title</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="@item.Id">@item.Title</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        }
+                        @if (Model.ShowCategoryFilter2)
+                        {
+                            <div class="list-categoryfilter-item list-categoryfilter-item-@Model.CategoryFilterCount">
+                                <select class="list-categoryfilter-category" name="c2">
+                                    @foreach (var item in Model.CategoryFilter2)
+                                    {
+                                        if (item.IsSelected)
+                                        {
+                                            <option value="@item.Id" selected="selected">@item.Title</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="@item.Id">@item.Title</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        }
+                        @if (Model.ShowCategoryFilter3)
+                        {
+                            <div class="list-categoryfilter-item list-categoryfilter-item-@Model.CategoryFilterCount">
+                                <select class="list-categoryfilter-category" name="c3">
+                                    @foreach (var item in Model.CategoryFilter3)
+                                    {
+                                        if (item.IsSelected)
+                                        {
+                                            <option value="@item.Id" selected="selected">@item.Title</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="@item.Id">@item.Title</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        }
+                        @if (Model.ShowCategoryFilter4)
+                        {
+                            <div class="list-categoryfilter-item list-categoryfilter-item-@Model.CategoryFilterCount">
+                                <select class="list-categoryfilter-category" name="c4">
+                                    @foreach (var item in Model.CategoryFilter4)
+                                    {
+                                        if (item.IsSelected)
+                                        {
+                                            <option value="@item.Id" selected="selected">@item.Title</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="@item.Id">@item.Title</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        }
+                        @if (Model.ShowCategoryFilter5)
+                        {
+                            <div class="list-categoryfilter-item list-categoryfilter-item-@Model.CategoryFilterCount">
+                                <select class="list-categoryfilter-category" name="c5">
+                                    @foreach (var item in Model.CategoryFilter5)
+                                    {
+                                        if (item.IsSelected)
+                                        {
+                                            <option value="@item.Id" selected="selected">@item.Title</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="@item.Id">@item.Title</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        }
+                        @if (Model.ShowCategoryFilter6)
+                        {
+                            <div class="list-categoryfilter-item list-categoryfilter-item-@Model.CategoryFilterCount">
+                                <select class="list-categoryfilter-category" name="c6">
+                                    @foreach (var item in Model.CategoryFilter6)
+                                    {
+                                        if (item.IsSelected)
+                                        {
+                                            <option value="@item.Id" selected="selected">@item.Title</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="@item.Id">@item.Title</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        }
+                        <div class="list-categoryfilter-item list-categoryfilter-item-@Model.CategoryFilterCount">
+                            <button class="list-categoryfilter-btn" type="submit">@Model.Current.CategoryFilterButtonLabel</button>
+                        </div>
+                    </div>
+                </form>
+            }
+            @Html.PropertyFor(m => m.List)
+        }
+        @if (Model.IsStatic)
+        {
+            var ListMarkup = Html.PropertyFor(m => m.Current.StaticArea, new { HasContainer = false, ChildrenCustomTagName = "TagToRemove" }).ToString();
+            ListMarkup = ListMarkup.Replace("<TagToRemove>", string.Empty).Replace("</TagToRemove>", string.Empty);
+
+            @Html.Raw(ListMarkup)
+        }
+
+        <!-- output a paging control that lets the user navigation to the previous page, next page, etc -->
+        @if (Model.Current.ShowPagination == true)
+        {
+            @Html.PagedListPager(Model.PagedList, page => Url.ContentUrl(Model.PageUrl) + "?page=" + page + Model.QueryStringFilter, new PagedListRenderOptions { Display = PagedListDisplayMode.IfNeeded, MaximumPageNumbersToDisplay = 5 })
+        }
+    </div>
+    @if (Model.Has(Model.Current.LinkLabel) && Model.Has(Model.Current.LinkUrl))
+    {
+        <div class="list-link">
+            <a href="@Model.Current.LinkUrl.RelativeUrl()">@Model.Current.LinkLabel</a>
+        </div>
+    }
+</div>
+@Model.End(this)
