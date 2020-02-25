@@ -4,9 +4,17 @@
 	var loginArea = document.querySelector(".header-login");
 	var button = header.querySelector(".login-button");
 
+	var closeBtn = document.createElement("div");
+	closeBtn.classList.add("closeBtn");
+	loginArea.appendChild(closeBtn);
+
 	button.addEventListener("click", function (e) {
 		e.preventDefault();
-		loginArea.classList.toggle("login-open");
+		loginArea.classList.add("login-open");
+	}, false);
+
+	closeBtn.addEventListener("click", function (e) {
+		loginArea.classList.remove("login-open");
 	}, false);
 
 	loginArea.addEventListener("click", function (e) {

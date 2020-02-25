@@ -18,8 +18,10 @@
 	opacity: 1;
 	z-index: 20;
 
+
 	.content__body {
 		position: absolute;
+		max-height: 100%;
 		max-width: 400px;
 		padding: 20px;
 		z-index: 25;
@@ -39,7 +41,7 @@
 	}
 
 	h2:not(:first-of-type) {
-		border-top: 4px solid $color-grey;
+		border-top: 4px solid $color-off-white;
 		padding-top: 25px;
 	}
 
@@ -58,5 +60,20 @@
 
 	a {
 		@include secondary-btn;
+	}
+
+	.closeBtn {
+		@include primary-btn;
+		width: 44px;
+		height: 44px;
+		border-radius: 50%;
+		background: $color-blue-nice;
+		background-position: center;
+		background-image: url(assets/img/icon-close.svg);
+		background-repeat: no-repeat;
+		background-size: 22px;
+		position: relative;
+		float: right;
+		z-index: 25;
 	}
 }
