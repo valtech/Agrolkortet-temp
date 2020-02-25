@@ -1,0 +1,9 @@
+@model QuestionPageViewModel
+@Model.Start(this)
+<div class="callout callout-questionpage">
+    <h3 class="callout-caption questionpage-question">@Model.Current.Question</h3> 
+    <div class="callout-caption questionpage-answer">
+        @Html.PropertyFor(m => m.Current.Answer)
+    </div>
+</div>
+@Model.End(this)

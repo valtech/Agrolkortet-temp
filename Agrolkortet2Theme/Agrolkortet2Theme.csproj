@@ -392,6 +392,7 @@
     <Content Include="src\js\apps\CookieinfoHandler.js" />
     <Content Include="src\js\apps\MobileHeaderMenu.js" />
     <Content Include="src\js\apps\ResponsiveTables.js" />
+    <Content Include="src\js\apps\ListFilter.js" />
     <Content Include="src\js\script.js" />
     <Content Include="package.nuspec">
       <SubType>Designer</SubType>
@@ -408,6 +409,7 @@
     <Content Include="package.json" />
     <Content Include="Views\_CalloutBlock.cshtml" />
     <Content Include="Views\_ContentBlock.cshtml" />
+    <Content Include="Views\_QuestionPage.cshtml" />
     <Content Include="Views\_Footer.cshtml" />
     <Content Include="Views\_Header.cshtml" />
     <Content Include="Views\_HeaderNavigation.cshtml" />
