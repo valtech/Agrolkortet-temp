@@ -18,7 +18,7 @@
             }
             <div class="callout__text">@Html.PropertyFor(m => m.Current.Body)</div>
 
-            @if (Model.Has(Model.Current.Link))
+            @if (Model.Has(Model.Current.LinkText) && Model.Has(Model.Current.Link))
             {
                 <span class="callout__button" href="@Url.ContentUrl(Model.Current.Link.ToString())">@Model.Current.LinkText</span>
             }

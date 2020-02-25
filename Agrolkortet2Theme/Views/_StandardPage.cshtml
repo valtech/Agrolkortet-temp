@@ -51,7 +51,7 @@
                 <p class="callout__text">@TextIndexer.StripHtml(WebUtility.HtmlDecode(Model.CalloutDescription.ToHtmlString()), 200)</p>
             }
 
-            @if (Model.Has(Model.Current.Callout.LinkText))
+            @if (Model.Has(Model.Current.Callout.LinkText) && Model.Has(Model.Current.LinkURL))
             {
                 <span href="@Url.ContentUrl(Model.Current.LinkURL)" class="callout__button">
                     @Model.Current.Callout.LinkText
