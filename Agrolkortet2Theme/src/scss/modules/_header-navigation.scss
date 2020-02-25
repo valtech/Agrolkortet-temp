@@ -92,7 +92,7 @@
 		}
 	}
 
-	.login-wrapper {
+	.login-button {
 		@include primary-btn;
 		margin: 0;
 		display: flex;
@@ -132,7 +132,7 @@
 	background: $color-white;
 	z-index: 5;
 
-	.login-wrapper {
+	.login-button {
 		display: none;
 	}
 
