@@ -365,10 +365,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dist\assets\img\background-small.png" />
     <Content Include="dist\assets\img\icon-close.svg" />
     <Content Include="dist\assets\img\icon-lock.svg" />
     <Content Include="dist\assets\img\icon-menu.svg" />
+    <Content Include="dist\assets\img\icon-check.svg" />
+    <Content Include="dist\assets\img\icon-phone.svg" />
+    <Content Include="dist\assets\img\icon-arrow.svg" />
+    <Content Include="dist\assets\img\swosh.svg" />
     <Content Include="dist\assets\img\logotype.png" />
     <Content Include="dist\lib\ofi.min.js" />
     <Content Include="gulpfile.js" />
@@ -385,6 +388,7 @@
     <EmbeddedResource Include="Setup\Theme_sv.xml" />
     <Content Include="src\js\apps\CookieinfoHandler.js" />
     <Content Include="src\js\apps\MobileHeaderMenu.js" />
+    <Content Include="src\js\apps\ResponsiveTables.js" />
     <Content Include="src\js\script.js" />
     <Content Include="package.nuspec">
       <SubType>Designer</SubType>
@@ -399,34 +403,43 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="package.json" />
-    <Content Include="Views\_Layout.cshtml" />
+    <Content Include="Views\_BreadcrumbsBlock.cshtml" />
+    <Content Include="Views\_CalloutBlock.cshtml" />
+    <Content Include="Views\_ContentBlock.cshtml" />
     <Content Include="Views\_Footer.cshtml" />
     <Content Include="Views\_Header.cshtml" />
+    <Content Include="Views\_HeaderNavigation.cshtml" />
+    <Content Include="Views\_Layout.cshtml" />
+    <Content Include="Views\_ListBlock.cshtml" />
+    <Content Include="Views\_LogoBlock.cshtml" />
+    <Content Include="Views\_NavigationBlock.cshtml" />
+    <Content Include="Views\_NavigationTree.cshtml" />
     <Content Include="src\scss\mixins\_buttons.scss" />
+    <Content Include="src\scss\mixins\_grid.scss" />
     <Content Include="src\scss\mixins\_mediaqueries.scss" />
     <Content Include="src\scss\mixins\_mixins.scss" />
-    <Content Include="src\scss\mixins\_object-fit.scss" />
+    <Content Include="src\scss\mixins\_object-fit.scss" />    
+    <Content Include="src\scss\modules\_article-page.scss" />
+    <Content Include="src\scss\modules\_banner.scss" />
+    <Content Include="src\scss\modules\_breadcrumbs.scss" />
     <Content Include="src\scss\modules\_callout.scss" />
     <Content Include="src\scss\modules\_content.scss" />
     <Content Include="src\scss\modules\_cookie.scss" />
+    <Content Include="src\scss\modules\_file-list.scss" />
     <Content Include="src\scss\modules\_forms.scss" />
+    <Content Include="src\scss\modules\_logo.scss" />
+    <Content Include="src\scss\modules\_header-navigation.scss" />
     <Content Include="src\scss\modules\_navigation.scss" />
     <Content Include="src\scss\modules\_start-page.scss" />
+    <Content Include="src\scss\modules\_table.scss" />
     <Content Include="src\scss\main.scss" />
     <Content Include="src\scss\_base.scss" />
     <Content Include="src\scss\_colors.scss" />
     <Content Include="src\scss\_layout.scss" />
     <Content Include="src\scss\_typography.scss" />
-    <Content Include="src\scss\modules\_article-page.scss" />
-    <Content Include="src\scss\modules\_breadcrumbs.scss" />
-    <Content Include="src\scss\modules\_logo.scss" />
-    <Content Include="src\scss\modules\_file-list.scss" />
-    <Content Include="Views\_BreadcrumbsBlock.cshtml" />
-    <Content Include="Views\_CalloutBlock.cshtml" />
-    <Content Include="Views\_ContentBlock.cshtml" />
-    <Content Include="Views\_LogoBlock.cshtml" />
-    <Content Include="Views\_NavigationBlock.cshtml" />
-    <Content Include="Views\_NavigationTree.cshtml" />
+    <Content Include="src\scss\_variables.scss" />
+
+
     <Content Include="dist\assets\fonts\LantmannenSans-Black.eot" />
     <Content Include="dist\assets\fonts\LantmannenSans-Black.woff" />
     <Content Include="dist\assets\fonts\LantmannenSans-Black.woff2" />
@@ -442,12 +455,6 @@
     <Content Include="dist\assets\fonts\LantmannenSans-Regular.ttf" />
     <Content Include="dist\assets\fonts\LantmannenSans-Regular.woff" />
     <Content Include="dist\assets\fonts\LantmannenSans-Regular.woff2" />
-    <Content Include="Views\_HeaderNavigation.cshtml" />
-    <Content Include="src\scss\modules\_header-navigation.scss" />
-    <Content Include="src\scss\_variables.scss" />
-    <Content Include="src\scss\mixins\_grid.scss" />
-    <Content Include="src\scss\modules\_banner.scss" />
-    <Content Include="Views\_BreadcrumbsPartialView.cshtml" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -476,7 +483,9 @@
   <ItemGroup>
     <None Include="readme.md" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="dist\assets\img\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -4,57 +4,42 @@ window.Agrolkortet2Theme = window.Agrolkortet2Theme || {};
     'use strict';
 
     app.CookieinfoHandler = function() {
-        var cookiewrapSelector = '.cookieinformation';
-        var cookieclearBtnSelector = '.cookieinformation-clearbtn';
+        const cookieName = 'hasshowncookie';
 
-        var set = function(key, value) {
-            key = encodeURIComponent(key);
-            value = encodeURIComponent(value);
+        const setHasShownCookie = function() {
+            const key = encodeURIComponent(cookieName);
+            const value = encodeURIComponent('1');
 
             document.cookie = key + '=' + value + '; ' + 'expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/;';
-
-            return true;
         };
 
-        // Gets a cookie and returns its value
-        var getValue = function(key) {
-            if(typeof key !== typeof 'str') {
-                return false;
-            }
-
-            var regex = '(?:(?:^|.*;\\s*)' + encodeURIComponent(key) + '\\s*\\=\\s*([^;]*).*$)|^.*$';
+        const hasShownBefore = function () {
+            var regex = '(?:(?:^|.*;\\s*)' + encodeURIComponent(cookieName) + '\\s*\\=\\s*([^;]*).*$)|^.*$';
             var value = document.cookie.replace(new RegExp(regex), '$1');
-            value = decodeURIComponent(value);
-
-            return value.length > 0 ? value : false;
+            return decodeURIComponent(value).length > 0;
         };
 
-        this.init = function() {
-            if(this.hasShownBefore() === false) {
-                this.wrap = $(cookiewrapSelector);
-                this.wrap.removeClass('is-hidden');
-                $('body').addClass('has-cookie-information');
-                this.btn  = $(cookieclearBtnSelector);
-                bindUIActions.call(this);
-            }
+        const clearMessage = function (wrap) {
+            document.querySelector('body').classList.remove('has-cookie-information');
+            wrap.classList.add('is-hidden');
+            setHasShownCookie();
         };
 
-        var bindUIActions = function() {
-            var that = this;
-            this.btn.on('click', function() {
-                that.clearMessage.call(that);
-                $('body').removeClass('has-cookie-information');
+        const init = function() {
+            if (hasShownBefore()) return;
+            
+            const wrap = document.querySelector('.cookieinformation');
+            wrap.classList.remove('is-hidden');
+            document.querySelector('body').classList.add('has-cookie-information');
+
+            document.querySelectorAll('.cookieinformation-clearbtn').forEach(button => {
+                button.addEventListener('click',
+                    function() {
+                        clearMessage(wrap);
+                    });
             });
         };
 
-        // Returns true if cookie information has been shown before
-        this.hasShownBefore = function() {
-            return getValue('hasshowncookie') === '1';
-        };
-
-        this.clearMessage = function() {
-            this.wrap.addClass('is-hidden');
-            set('hasshowncookie', '1');
-        };
+        init();
     };
 }(window.Agrolkortet2Theme));
