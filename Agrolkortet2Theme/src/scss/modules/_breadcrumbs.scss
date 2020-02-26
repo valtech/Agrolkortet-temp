@@ -1,8 +1,8 @@
 .breadcrumbs {
-	position: relative;
+	position: absolute;
 	padding-inline-start: 0px;
-	margin: auto;
-	top: 70px;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	width: 80%;
 	display: flex;
 	flex-wrap: wrap;
@@ -48,7 +48,7 @@
 	}
 
 	@include for-tablet-and-up {
-		top: 130px;
+		top: 150px;
 
 		li, li:first-child {
 			display: inline;
@@ -65,8 +65,8 @@
 	}
 
 	@include for-desktop-and-up {
-		justify-content: start;
 		top: 95px;
-		left: 50px;
+		left: -215px;
+		transform: none;
 	}
 }
