@@ -429,7 +429,7 @@
     <Content Include="src\scss\modules\_callout.scss" />
     <Content Include="src\scss\modules\_content.scss" />
     <Content Include="src\scss\modules\_cookie.scss" />
-    <Content Include="src\scss\modules\_file-list.scss" />
+    <Content Include="src\scss\modules\_faq.scss" />
     <Content Include="src\scss\modules\_forms.scss" />
     <Content Include="src\scss\modules\_logo.scss" />
     <Content Include="src\scss\modules\_header-navigation.scss" />

@@ -1,0 +1,38 @@
+.callout-questionpage {
+    .questionpage-question {
+        position: relative;
+        padding: 0.3rem 0;
+        padding-right: 30px;
+        cursor: pointer;
+    
+        &:after {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-position: center;
+            background-image: url(assets/img/icon-arrow.svg);
+            background-repeat: no-repeat;
+            position: absolute;
+            right: 6px;
+            top: 7px;
+            transition: transform 0.2s ease-in-out;
+        }
+        
+        &.open {
+            &:after {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    
+    .questionpage-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s linear;
+    
+        &.show {
+            max-height: 2000px;
+        }
+    }
+}
