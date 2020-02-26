@@ -1,6 +1,7 @@
 .breadcrumbs {
 	position: absolute;
 	padding-inline-start: 0px;
+	top: 80px;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 80%;
@@ -71,8 +72,9 @@
 	}
 
 	@include for-desktop-and-up {
+		justify-content: start;
 		top: 95px;
-		left: -215px;
+		left: 200px;
 		transform: none;
 	}
 }
