@@ -403,7 +403,6 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="package.json" />
-    <Content Include="Views\_BreadcrumbsBlock.cshtml" />
     <Content Include="Views\_CalloutBlock.cshtml" />
     <Content Include="Views\_ContentBlock.cshtml" />
     <Content Include="Views\_Footer.cshtml" />
@@ -418,7 +417,7 @@
     <Content Include="src\scss\mixins\_grid.scss" />
     <Content Include="src\scss\mixins\_mediaqueries.scss" />
     <Content Include="src\scss\mixins\_mixins.scss" />
-    <Content Include="src\scss\mixins\_object-fit.scss" />    
+    <Content Include="src\scss\mixins\_object-fit.scss" />
     <Content Include="src\scss\modules\_article-page.scss" />
     <Content Include="src\scss\modules\_banner.scss" />
     <Content Include="src\scss\modules\_breadcrumbs.scss" />
@@ -438,8 +437,6 @@
     <Content Include="src\scss\_layout.scss" />
     <Content Include="src\scss\_typography.scss" />
     <Content Include="src\scss\_variables.scss" />
-
-
     <Content Include="dist\assets\fonts\LantmannenSans-Black.eot" />
     <Content Include="dist\assets\fonts\LantmannenSans-Black.woff" />
     <Content Include="dist\assets\fonts\LantmannenSans-Black.woff2" />
@@ -455,6 +452,7 @@
     <Content Include="dist\assets\fonts\LantmannenSans-Regular.ttf" />
     <Content Include="dist\assets\fonts\LantmannenSans-Regular.woff" />
     <Content Include="dist\assets\fonts\LantmannenSans-Regular.woff2" />
+    <Content Include="Views\_breadcrumbsBlock.cshtml" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -483,9 +481,7 @@
   <ItemGroup>
     <None Include="readme.md" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="dist\assets\img\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

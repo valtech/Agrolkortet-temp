@@ -1,0 +1,44 @@
+﻿@using Lantmannen.Helpers;
+@using EPiServer.Web;
+@model StandardPageViewModel
+
+    <ul class="breadcrumbs">
+        @*Helper used as template for a page in the bread crumb, recursively triggering the rendering of the next page*@
+        @helper ItemTemplate(HtmlHelpers.MenuItem breadCrumbItem)
+        {
+            if (breadCrumbItem.Selected)
+            {
+                if (breadCrumbItem.Page.HasTemplate() && !breadCrumbItem.Page.ContentLink.CompareToIgnoreWorkID(Model.Current.ContentLink))
+                {
+                    <li class="breadcrumb-item">
+                        <a href="@Url.ContentUrl(breadCrumbItem.Page.ContentLink)" class="" title="@breadCrumbItem.Page.Name">
+                            @breadCrumbItem.Page.Name
+                        </a>
+                    </li>
+                }
+
+                else
+                {
+                    <li class="breadcrumb-item">
+                        <a class="active" title="@breadCrumbItem.Page.Name">
+                            @breadCrumbItem.Page.Name
+                        </a>
+                    </li>
+                }
+
+            }
+
+            if (!breadCrumbItem.Page.ContentLink.CompareToIgnoreWorkID(Model.Current.ContentLink))
+            {
+                @Html.MenuList(breadCrumbItem.Page.ContentLink, ItemTemplate)
+            }
+        }
+
+        <li class="breadcrumb-item">
+            <a href="@Url.ContentUrl(ContentReference.StartPage)" title="Hem">
+                Hem
+            </a>
+        </li>
+        @Html.MenuList(ContentReference.StartPage, ItemTemplate, requireVisibleInMenu: false, requirePageTemplate: false)
+
+    </ul>
