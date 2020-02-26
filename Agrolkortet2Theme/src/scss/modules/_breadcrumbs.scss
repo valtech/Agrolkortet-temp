@@ -1,15 +1,17 @@
 .breadcrumbs {
 	position: relative;
+	padding-inline-start: 0px;
 	margin: auto;
 	top: 70px;
 	width: 80%;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 	z-index: 4;
 
 	li {
+		display: none;
 		height: 30px;
-		display: inline;
 		list-style-type: none;
 		text-decoration: none;
 		direction: rtl;
@@ -24,7 +26,11 @@
 		}
 	}
 
-	:not(:first-child) {
+	li:nth-last-child(2), li:nth-last-child(3) {
+		display: inline;
+	}
+
+	li:nth-last-child(2) {
 		:after {
 			padding-left: 5px;
 			content: "/";
@@ -33,11 +39,34 @@
 		}
 	}
 
+	li:first-child {
+		display: none;
+	}
+
+	li:nth-child(2) {
+		content: none;
+	}
+
 	@include for-tablet-and-up {
 		top: 130px;
-		margin: 0;
+
+		li, li:first-child {
+			display: inline;
+		}
+
+		:not(:first-child) {
+			:after {
+				padding-left: 5px;
+				content: "/";
+				color: $color-grey;
+				padding-right: 5px;
+			}
+		}
 	}
 
 	@include for-desktop-and-up {
+		justify-content: start;
+		top: 95px;
+		left: 50px;
 	}
 }
