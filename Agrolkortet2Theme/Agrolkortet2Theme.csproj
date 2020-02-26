@@ -452,7 +452,7 @@
     <Content Include="dist\assets\fonts\LantmannenSans-Regular.ttf" />
     <Content Include="dist\assets\fonts\LantmannenSans-Regular.woff" />
     <Content Include="dist\assets\fonts\LantmannenSans-Regular.woff2" />
-    <Content Include="Views\_BreadcrumbsPartialView.cshtml" />
+    <Content Include="Views\_breadcrumbsBlock.cshtml" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
