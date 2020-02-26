@@ -31,7 +31,7 @@
 	}
 
 	li:nth-last-child(2) {
-		:after {
+		&:after {
 			padding-left: 5px;
 			content: "/";
 			color: $color-grey;
@@ -54,12 +54,18 @@
 			display: inline;
 		}
 
-		:not(:first-child) {
-			:after {
+		li:nth-child(n+2) {
+			&:after {
 				padding-left: 5px;
 				content: "/";
 				color: $color-grey;
 				padding-right: 5px;
+			}
+		}
+
+		li:first-child {
+			&:after {
+				content: none;
 			}
 		}
 	}
