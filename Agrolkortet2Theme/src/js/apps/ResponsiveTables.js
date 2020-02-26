@@ -30,7 +30,7 @@ window.Agrolkortet2Theme = window.Agrolkortet2Theme || {};
         }
 
         const init = function() {
-            Array.from(tables).forEach(table => {
+            Array.prototype.forEach.call(tables, table => {
                 wrapAndReplace(table)
             })
         };
