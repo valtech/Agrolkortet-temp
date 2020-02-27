@@ -14,7 +14,7 @@
 
     .content-wrapper {
         @include container;
-        padding: $base-padding;
+        padding: 0 $base-padding;
         background: $color-white;
     }
 

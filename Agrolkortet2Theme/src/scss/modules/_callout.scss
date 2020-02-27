@@ -45,6 +45,7 @@
         margin-top: 0;
         text-decoration: none;
         max-width: 500px;
+        text-transform: uppercase;
     }
 
     &__text {
@@ -93,7 +94,7 @@
             text-align: center;
             justify-content: flex-start;
             align-items: center;
-            padding: calc(#{$base-padding} / 2) $base-padding;
+            padding: calc(#{$base-padding} / 2) 15%;
         }
 
         &__image-wrapper {
@@ -101,11 +102,12 @@
         }
 
         &__title {
-            max-width: none;
+            @extend %h5;
+            max-width: 100%;
         }
 
         &__text {
-            max-width: none;
+            max-width: 100%;
         }
     }
 }
@@ -120,5 +122,13 @@
         color: $color-text;
         font-weight: 700; 
         border-bottom: 1px solid $color-grey-light;
+    }
+
+    .after-content .list-wrapper.list-onecolumn & {
+        @include for-tablet-and-up {
+            max-width: 700px;
+            width: 100%;
+            margin: auto !important;
+        }
     }
 }

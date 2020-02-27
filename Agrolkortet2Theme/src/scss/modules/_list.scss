@@ -3,7 +3,7 @@
     text-align: center;
 
     @include for-tablet-and-up {
-        padding: $half-grid-gap;
+        padding: 2rem $half-grid-gap;
     }
 
     &-link {
@@ -18,6 +18,13 @@
 
     &-categoryfilterwrap {
         display: flex;
+        margin: 0 0.5rem;
+
+        @include for-tablet-and-up {
+            max-width: 700px;
+            width: 100%;
+            margin: auto;
+        }
     }
 
     .list-title,
@@ -25,6 +32,18 @@
         max-width: 800px;
         margin: 0 auto;
         padding: $base-padding;
+    }
+
+    .list-title{
+        @extend %h5;
+        color: $color-text;
+        border-bottom: 5px $color-blue-lightest-power solid;
+        display: inline-block;
+        margin-bottom: 2rem;
+        margin-top: 3rem;
+        padding: 1rem 0 0.5rem;
+        font-size: 1.1rem;
+        text-transform: uppercase;
     }
 }
 
