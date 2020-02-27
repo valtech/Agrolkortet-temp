@@ -16,6 +16,19 @@
         display: none !important;
     }
 }
+@mixin bc-sep {
+	&:before {
+		content: "/";
+		padding-right: 5px;
+	}
+}
+
+@mixin hide-bc-sep {
+	&:before {
+		content: none;
+	}
+}
+
 
 // Layout mixins
 @mixin container {

@@ -1,5 +1,5 @@
 ﻿.header-navigation {
-	position: relative;
+	position: absolute;
 	width: 100%;
 	height: $header-height;
 	left: 0;
@@ -23,12 +23,6 @@
 		z-index: 15;
 
 		@include for-tablet-and-up {
-			width: 90px;
-			height: 90px;
-			background-size: 44px;
-		}
-
-		@include for-desktop-and-up {
 			display: none;
 		}
 	}
@@ -45,7 +39,7 @@
 		a {
 			text-decoration: none;
 			color: $color-black;
-			font-size: 23px;
+			font-size: 20px;
 			line-height: 3;
 			letter-spacing: 0.58px;
 			font-weight: 1000;
@@ -58,13 +52,23 @@
 			}
 		}
 
-		@include for-desktop-and-up {
+		@include for-tablet-and-up {
 			display: inline;
-			left: 200px;
+			left: 180px;
 
 			li {
 				display: inline;
-				padding-right: 30px;
+				padding-right: 15px;
+			}
+		}
+
+		@include for-desktop-and-up {
+			li {
+				padding-right: 25px;
+			}
+
+			a {
+				font-size: 23px;
 			}
 		}
 	}
@@ -85,9 +89,6 @@
 		@include for-tablet-and-up {
 			height: 115px;
 			width: 115px;
-		}
-
-		@include for-desktop-and-up {
 			left: 115px;
 		}
 	}
@@ -111,7 +112,7 @@
 		}
 
 		@include for-tablet-and-up {
-			align-self: flex-end;
+			align-self: center;
 
 			img {
 				display: block;

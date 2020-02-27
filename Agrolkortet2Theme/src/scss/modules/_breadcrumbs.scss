@@ -11,11 +11,12 @@
 	z-index: 4;
 
 	li {
-		display: none;
+		display: inline;
 		height: 30px;
 		list-style-type: none;
 		text-decoration: none;
-		direction: rtl;
+		direction: rtl; /*The collection of HTML nodes produced by the View starts with the deepest page*/
+		@include bc-sep;
 
 		a {
 			text-decoration: none;
@@ -25,56 +26,22 @@
 		.active {
 			color: $color-grey;
 		}
-	}
 
-	li:nth-last-child(2), li:nth-last-child(3) {
-		display: inline;
-	}
-
-	li:nth-last-child(2) {
-		&:after {
-			padding-left: 5px;
-			content: "/";
-			color: $color-grey;
-			padding-right: 5px;
+		&:last-child {
+			@include hide-bc-sep;
 		}
-	}
 
-	li:first-child {
-		display: none;
-	}
-
-	li:nth-child(2) {
-		content: none;
+		@include for-phone-only {
+			&:first-child, &:last-child, &:not(:nth-last-child(3)):not(:nth-last-child(2)) {
+				display: none;
+			}
+		}
 	}
 
 	@include for-tablet-and-up {
-		top: 150px;
-
-		li, li:first-child {
-			display: inline;
-		}
-
-		li:nth-child(n+2) {
-			&:after {
-				padding-left: 5px;
-				content: "/";
-				color: $color-grey;
-				padding-right: 5px;
-			}
-		}
-
-		li:first-child {
-			&:after {
-				content: none;
-			}
-		}
-	}
-
-	@include for-desktop-and-up {
+		width: 100%;
+		top: 110px;
 		justify-content: start;
-		top: 95px;
-		left: 200px;
-		transform: none;
+		padding-left: 180px;
 	}
 }

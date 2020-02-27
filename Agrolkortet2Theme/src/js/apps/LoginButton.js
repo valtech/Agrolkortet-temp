@@ -1,8 +1,9 @@
 ﻿window.Agrolkortet2Theme = window.Agrolkortet2Theme || {};
 
 (function (app) {
-	var overlay = document.querySelector(".overlay");
-	var loginArea = document.querySelector(".header-login");
+    var loginArea = document.querySelector(".header-login");
+    if (!loginArea) return;
+    var overlay = document.querySelector(".overlay");
 	var content = loginArea.querySelector(".content__body");
 	var button = document.querySelector(".login-button");
 

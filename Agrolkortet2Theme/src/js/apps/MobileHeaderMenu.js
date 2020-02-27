@@ -2,12 +2,11 @@
 
 (function (app) {
 	var header = document.querySelector(".header-navigation");
-	var button = header.querySelector(".menu-button");
+    var button = header.querySelector(".menu-button");
 
 	button.addEventListener("click", function (e) {
 		e.preventDefault();
 		header.classList.toggle("mobile-menu-open");
-		selectList.focus();
 	}, false);
 
 })(window.Agrolkortet2Theme);
