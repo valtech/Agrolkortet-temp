@@ -16,6 +16,10 @@
         }
     }
 
+    &-categoryfilterwrap {
+        display: flex;
+    }
+
     .list-title,
     .list-description {
         max-width: 800px;

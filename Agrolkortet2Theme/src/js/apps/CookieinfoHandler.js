@@ -32,11 +32,12 @@ window.Agrolkortet2Theme = window.Agrolkortet2Theme || {};
             wrap.classList.remove('is-hidden');
             document.querySelector('body').classList.add('has-cookie-information');
 
-            document.querySelectorAll('.cookieinformation-clearbtn').forEach(button => {
-                button.addEventListener('click',
-                    function() {
-                        clearMessage(wrap);
-                    });
+
+            Array.prototype.forEach.call(document.querySelectorAll('.cookieinformation-clearbtn'), button => {
+            button.addEventListener('click',
+                function() {
+                    clearMessage(wrap);
+                });
             });
         };
 

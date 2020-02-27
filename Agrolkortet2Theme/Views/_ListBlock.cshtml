@@ -20,7 +20,7 @@
         {
             if (Model.ShowCategoryFilterForm)
             {
-                <form method="POST" class="list-categoryfilterwrap">
+                <form method="GET" class="list-categoryfilterwrap">
                     <div class="list-categoryfilter">
                         @if (Model.ShowCategoryFilter1)
                         {
@@ -131,7 +131,9 @@
                             </div>
                         }
                         <div class="list-categoryfilter-item list-categoryfilter-item-@Model.CategoryFilterCount">
-                            <button class="list-categoryfilter-btn" type="submit">@Model.Current.CategoryFilterButtonLabel</button>
+                            <noscript>
+                                <button class="list-categoryfilter-btn" type="submit">@Model.Current.CategoryFilterButtonLabel</button>
+                            </noscript>
                         </div>
                     </div>
                 </form>

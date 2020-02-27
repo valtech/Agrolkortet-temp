@@ -159,6 +159,9 @@
       <HintPath>..\packages\Lantmannen.Event.4.8.0\lib\Lantmannen.Event.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Lantmannen.FAQ, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lantmannen.FAQ.1.0.4\lib\Lantmannen.FAQ.dll</HintPath>
+    </Reference>
     <Reference Include="Lantmannen.Favicon, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Lantmannen.Favicon.4.8.0\lib\Lantmannen.Favicon.dll</HintPath>
       <Private>True</Private>
@@ -389,6 +392,7 @@
     <Content Include="src\js\apps\CookieinfoHandler.js" />
     <Content Include="src\js\apps\MobileHeaderMenu.js" />
     <Content Include="src\js\apps\ResponsiveTables.js" />
+    <Content Include="src\js\apps\ListFilter.js" />
     <Content Include="src\js\script.js" />
     <Content Include="package.nuspec">
       <SubType>Designer</SubType>
@@ -405,6 +409,7 @@
     <Content Include="package.json" />
     <Content Include="Views\_CalloutBlock.cshtml" />
     <Content Include="Views\_ContentBlock.cshtml" />
+    <Content Include="Views\_QuestionPage.cshtml" />
     <Content Include="Views\_Footer.cshtml" />
     <Content Include="Views\_Header.cshtml" />
     <Content Include="Views\_HeaderNavigation.cshtml" />
@@ -424,7 +429,7 @@
     <Content Include="src\scss\modules\_callout.scss" />
     <Content Include="src\scss\modules\_content.scss" />
     <Content Include="src\scss\modules\_cookie.scss" />
-    <Content Include="src\scss\modules\_file-list.scss" />
+    <Content Include="src\scss\modules\_faq.scss" />
     <Content Include="src\scss\modules\_forms.scss" />
     <Content Include="src\scss\modules\_logo.scss" />
     <Content Include="src\scss\modules\_header-navigation.scss" />
