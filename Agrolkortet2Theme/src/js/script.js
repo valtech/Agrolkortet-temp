@@ -13,7 +13,8 @@
     listFilter;
 
     const faq = new window.Agrolkortet2Theme.FAQ();
-    faq;
+	faq;
+
 
     if (window.objectFitImages !== undefined) {
         objectFitImages();

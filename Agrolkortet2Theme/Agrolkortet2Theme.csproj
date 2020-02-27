@@ -368,7 +368,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dist\assets\img\icon-close.svg" />
+    <Content Include="dist\assets\img\icon-check.svg" />
+    <Content Include="dist\assets\img\icon-close-white.svg" />
+    <Content Include="dist\assets\img\icon-close-black.svg" />
     <Content Include="dist\assets\img\icon-lock.svg" />
     <Content Include="dist\assets\img\icon-menu.svg" />
     <Content Include="dist\assets\img\icon-check.svg" />
@@ -390,6 +392,7 @@
     <Content Include="Gulp\watch.js" />
     <EmbeddedResource Include="Setup\Theme_sv.xml" />
     <Content Include="src\js\apps\CookieinfoHandler.js" />
+    <Content Include="src\js\apps\LoginButton.js" />
     <Content Include="src\js\apps\MobileHeaderMenu.js" />
     <Content Include="src\js\apps\ResponsiveTables.js" />
     <Content Include="src\js\apps\ListFilter.js" />
@@ -407,6 +410,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="package.json" />
+    <Content Include="Views\_BreadcrumbsBlock.cshtml" />
     <Content Include="Views\_CalloutBlock.cshtml" />
     <Content Include="Views\_ContentBlock.cshtml" />
     <Content Include="Views\_QuestionPage.cshtml" />
@@ -457,7 +461,7 @@
     <Content Include="dist\assets\fonts\LantmannenSans-Regular.ttf" />
     <Content Include="dist\assets\fonts\LantmannenSans-Regular.woff" />
     <Content Include="dist\assets\fonts\LantmannenSans-Regular.woff2" />
-    <Content Include="Views\_breadcrumbsBlock.cshtml" />
+    <Content Include="src\scss\modules\_login-area.scss" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

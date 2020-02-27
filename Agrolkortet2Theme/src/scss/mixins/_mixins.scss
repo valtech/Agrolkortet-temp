@@ -16,6 +16,19 @@
         display: none !important;
     }
 }
+@mixin breadcrumb-divider {
+	&:before {
+		content: "/";
+		padding-right: 5px;
+	}
+}
+
+@mixin breadcrumb-divider-hidden {
+	&:before {
+		content: none;
+	}
+}
+
 
 // Layout mixins
 @mixin container {

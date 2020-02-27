@@ -1,0 +1,93 @@
+﻿.header-login {
+	display: none;
+}
+
+.overlay {
+	display: none;
+	background: rgba(0, 0, 0, .25);
+	opacity: 0;
+	transition: opacity .25s ease;
+}
+
+.overlay--active {
+	display: block;
+	position: fixed;
+	padding: 0;
+	margin: 0;
+	top: 0;
+	left: 0;
+	max-width: 100%;
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	z-index: 20;
+}
+
+.login--open {
+	display: block;
+	position: absolute;
+	right: $grid-gap;
+	max-width: none;
+	width: auto;
+	opacity: 1;
+	z-index: 20;
+
+	.content__body {
+		max-height: 100%;
+		max-width: 400px;
+		padding: 20px;
+		margin-left: 5px;
+		z-index: 25;
+		background: white;
+	}
+
+	h1 {
+		color: $color-blue-nice;
+		text-transform: uppercase;
+		font-size: 1.5rem;
+	}
+
+	h2 {
+		color: $color-text;
+		font-size: 1rem;
+		font-weight: bold;
+	}
+
+	h2:not(:first-of-type) {
+		border-top: 4px solid $color-off-white;
+		padding-top: 25px;
+	}
+
+	ul {
+		padding-inline-start: 10px;
+	}
+
+	li {
+		list-style-type: none;
+		background: url('assets/img/icon-check.svg') no-repeat bottom left;
+		background-size: 15px;
+		height: 30px;
+		padding-left: 20px;
+		padding-top: 13px;
+	}
+
+	a {
+		@include secondary-btn;
+	}
+
+	.close-button {
+		@include primary-btn;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 44px;
+		height: 44px;
+		border-radius: 50%;
+		background: $color-blue-nice;
+		background-position: center;
+		background-image: url(assets/img/icon-close-white.svg);
+		background-repeat: no-repeat;
+		background-size: 20px;
+		z-index: 25;
+	}
+}

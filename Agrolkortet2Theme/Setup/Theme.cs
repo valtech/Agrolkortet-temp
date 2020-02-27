@@ -19,8 +19,9 @@ namespace Lantmannen.Agrolkortet2Theme.Setup
                 yield return new ThemeStyle("LogoBlock", "Standard", string.Empty, true);
 
                 yield return new ThemeStyle("ContentBlock", "Standard", string.Empty, true);
+				yield return new ThemeStyle("ContentBlock", "Login", "login-area", true);
 
-                yield return new ThemeStyle("CookieInformationBlock", "Standard", string.Empty, true);
+				yield return new ThemeStyle("CookieInformationBlock", "Standard", string.Empty, true);
 
                 yield return new ThemeStyle("FileListBlock", "Standard", string.Empty, true);
 
