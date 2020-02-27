@@ -33,14 +33,13 @@ img {
     height: 100%;
 }
 
-.container-full {
-	header {
-		.container {
-			@include container;
-			position: relative;
-		}
+.header {
+	&__container {
+		@include container;
+		position: relative;
 	}
 }
+
 
 .hide {
 	display: none !important;

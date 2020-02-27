@@ -6,10 +6,10 @@
 	display: none;
 	background: rgba(0, 0, 0, .25);
 	opacity: 0;
-	-webkit-transition: opacity .25s ease;
+	transition: opacity .25s ease;
 }
 
-.overlay-active {
+.overlay--active {
 	display: block;
 	position: fixed;
 	padding: 0;
@@ -23,7 +23,7 @@
 	z-index: 20;
 }
 
-.login-open {
+.login--open {
 	display: block;
 	position: absolute;
 	right: $grid-gap;
@@ -48,7 +48,7 @@
 	}
 
 	h2 {
-		color: $color-black;
+		color: $color-text;
 		font-size: 1rem;
 		font-weight: bold;
 	}
@@ -75,7 +75,7 @@
 		@include secondary-btn;
 	}
 
-	.closeBtn {
+	.close-button {
 		@include primary-btn;
 		position: absolute;
 		top: 0;

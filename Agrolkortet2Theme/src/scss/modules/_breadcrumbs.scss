@@ -16,7 +16,7 @@
 		list-style-type: none;
 		text-decoration: none;
 		direction: rtl; /*The collection of HTML nodes produced by the View starts with the deepest page*/
-		@include bc-sep;
+		@include breadcrumb-divider;
 
 		a {
 			text-decoration: none;
@@ -28,7 +28,11 @@
 		}
 
 		&:last-child {
-			@include hide-bc-sep;
+			@include breadcrumb-divider-hidden;
+		}
+
+		&:only-child {
+			display: none;
 		}
 
 		@include for-phone-only {

@@ -16,14 +16,14 @@
         display: none !important;
     }
 }
-@mixin bc-sep {
+@mixin breadcrumb-divider {
 	&:before {
 		content: "/";
 		padding-right: 5px;
 	}
 }
 
-@mixin hide-bc-sep {
+@mixin breadcrumb-divider-hidden {
 	&:before {
 		content: none;
 	}

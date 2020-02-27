@@ -2,21 +2,21 @@
 
 (function (app) {
     var loginArea = document.querySelector(".header-login");
-    if (!loginArea) return;
-    var overlay = document.querySelector(".overlay");
 	var content = loginArea.querySelector(".content__body");
-	var button = document.querySelector(".login-button");
+	if (!loginArea || !content) return;
+    var overlay = document.querySelector(".overlay");
+	var loginButton = document.querySelector(".login-button");
 
-	var closeBtn = document.createElement("div");
-	closeBtn.classList.add("closeBtn");
-	content.appendChild(closeBtn);
+	var closeButton = document.createElement("div");
+	closeButton.classList.add("close-button");
+	content.appendChild(closeButton);
 
-	button.addEventListener("click", function (e) {
+	loginButton.addEventListener("click", function (e) {
 		e.preventDefault();
 		openLogin();
 	}, false);
 
-	closeBtn.addEventListener("click", function (e) {
+	closeButton.addEventListener("click", function (e) {
 		closeLogin();
 	}, false);
 
@@ -25,14 +25,14 @@
 	}, false);
 
 	function openLogin() {
-		loginArea.classList.add("login-open");
-		loginArea.style.top = button.offsetTop + "px";
-		overlay.classList.add("overlay-active");
+		loginArea.classList.add("login--open");
+		loginArea.style.top = loginButton.offsetTop + "px";
+		overlay.classList.add("overlay--active");
 	}
 
 	function closeLogin() {
-		loginArea.classList.remove("login-open");
-		overlay.classList.remove("overlay-active");
+		loginArea.classList.remove("login--open");
+		overlay.classList.remove("overlay--active");
 	}
 
 })(window.Agrolkortet2Theme);
