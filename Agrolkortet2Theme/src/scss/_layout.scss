@@ -18,3 +18,25 @@
         @include grid-column(4);
     }
 }
+
+.main {
+    .content-body {
+        .list {
+            padding: 0;
+            margin: 1rem 0;
+
+            .list-title {
+                @extend %p;
+                font-weight: 500;
+                color: $color-text;
+                margin: 0;
+                padding: 0;
+                text-align: left;
+            }
+        }
+    
+        .callout-questionpage {
+            margin: 0;
+        }
+    }
+}

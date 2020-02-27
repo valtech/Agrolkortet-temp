@@ -109,3 +109,16 @@
         }
     }
 }
+
+.callout-questionpage {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    .questionpage-question {
+        @extend %p;
+        color: $color-text;
+        font-weight: 700; 
+        border-bottom: 1px solid $color-grey-light;
+    }
+}

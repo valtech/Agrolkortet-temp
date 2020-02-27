@@ -9,6 +9,12 @@
     const responsiveTables = new window.Agrolkortet2Theme.ResponsiveTables();
     responsiveTables;
 
+    const listFilter = new window.Agrolkortet2Theme.ListFilter();
+    listFilter;
+
+    const faq = new window.Agrolkortet2Theme.FAQ();
+    faq;
+
     if (window.objectFitImages !== undefined) {
         objectFitImages();
     }
