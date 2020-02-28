@@ -44,6 +44,7 @@
         padding: 1rem 0 0.5rem;
         font-size: 1.1rem;
         text-transform: uppercase;
+        font-stretch: condensed;
     }
 }
 
@@ -78,6 +79,23 @@
 }
 
 .list--ping-pong {
+    .list-title {
+        margin-bottom: 4rem;
+    }
+
+    .callout {
+        margin-bottom: 3rem;
+
+        &__image-wrapper {
+            flex: 0.9;
+        }
+
+        &__title {
+            font-size: 2.5rem;
+        }
+    }
+
+
     @include for-tablet-and-up {
         .list-wrapper{
             .callout {
@@ -120,14 +138,6 @@
                     }
                 }
             }
-        }
-
-        .callout {
-            margin-bottom: 3rem;
-        }
-    
-        .callout__image-wrapper {
-            flex: 0.9;
         }
     }
 }

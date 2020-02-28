@@ -47,11 +47,6 @@
             @include for-phone-only {
                 padding: 0 $base-padding;
             }
-
-            em {
-                color: $color-blue-nice;
-                font-style: normal;
-            }
         }
     
         .content-preamble {

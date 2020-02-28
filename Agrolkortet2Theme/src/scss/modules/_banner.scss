@@ -32,15 +32,14 @@
             text-transform: uppercase;
             margin-top: 0;
             line-height: 1;
-
-            em {
-                color: $color-blue-nice;
-                font-style: normal;
-            }
         }
 
         .banner-body p {
-            @extend %preamble;
+            font-size: 1rem;
+
+            @include for-tablet-and-up {
+                font-size: 1.25rem;
+            }
         }
 
         .banner-link {
