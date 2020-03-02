@@ -43,7 +43,9 @@
         <div class="callout__body">
             @if (Model.Has(Model.CalloutTitle))
             {
-                <h3 class="callout__title">@Model.CalloutTitle</h3>
+                <h3 class="callout__title">
+                    @Html.Raw(Model.CalloutTitle)
+                </h3>
             }
 
             @if (Model.Has(Model.CalloutDescription))
