@@ -52,7 +52,7 @@
         .content-preamble {
             background: $color-blue-light-soft;
             color: $color-white;
-            flex-basis: 30%;
+            width: 30%;
             padding: $base-padding calc(2 * #{$base-padding});
             position: relative;
             top: -2rem;

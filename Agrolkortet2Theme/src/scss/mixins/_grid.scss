@@ -4,8 +4,7 @@
 }
 
 @mixin grid-column($columns) {
-    display: flex;
-    flex-basis: 100%;
+    width: 100%;
     margin: $half-grid-gap;
 
     @include for-phone-only {
@@ -14,14 +13,14 @@
 
     @if $columns == 2 {
         @include for-tablet-and-up {
-            flex-basis: calc(50% - #{$grid-gap});
+            width: calc(50% - #{$grid-gap});
             
         }
     }
 
     @if $columns == 3 {
         @include for-tablet-and-up {
-            flex-basis: calc(33.333% - #{$grid-gap});
+            width: calc(33.333% - #{$grid-gap});
 
         }
     }
@@ -29,7 +28,7 @@
     @if $columns == 4 {
         
         @include for-tablet-and-up {
-            flex-basis: calc(25% - #{$grid-gap});
+            width: calc(25% - #{$grid-gap});
 
         }
     }
