@@ -1,0 +1,102 @@
+﻿#footer {
+	position: absolute;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	background-color: $color-blue-nice;
+	background-image: url('assets/img/swosh.svg');
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	padding: 7px;
+	padding-bottom: 120px;
+
+
+	@include for-desktop-and-up {
+		flex-direction: row;
+		padding-bottom: 40px;
+		/* Prevents shrinkage in IE11 */
+		& > div {
+			min-width: 80%;
+		}
+	}
+
+	.list {
+		margin-bottom: 60px;
+
+		&-title {
+			color: $color-white;
+		}
+
+		&-wrapper {
+			margin: 0;
+
+			.callout__button[href^="mailto:"] {
+				@include primary-btn;
+			}
+		}
+	}
+
+	.section {
+		@include container;
+		padding: 1rem;
+
+		&-container {
+			display: flex;
+			flex-direction: column;
+
+
+			@include for-desktop-and-up {
+				&:last-child {
+					flex: 1 0 0;
+					position: relative;
+				}
+			}
+		}
+
+
+		.content {
+			margin: 0 auto;
+			padding: 0 45px;
+			color: $color-white;
+
+			h4 {
+				color: $color-white;
+				font-size: 1rem;
+				font-stretch: condensed;
+			}
+
+			&__body {
+				p {
+					line-height: 1.2;
+					font-size: 0.9rem;
+
+					strong {
+						font-stretch: condensed;
+					}
+				}
+			}
+
+			@include for-desktop-and-up {
+				margin: 0;
+				padding: 0;
+				text-align: left;
+			}
+		}
+
+		.image {
+			img {
+				display: inline-block;
+				width: 185px;
+				height: 185px;
+				margin-top: 120px;
+
+				@include for-desktop-and-up {
+					position: absolute;
+					bottom: 0;
+					right: 0;
+				}
+			}
+		}
+	}
+}

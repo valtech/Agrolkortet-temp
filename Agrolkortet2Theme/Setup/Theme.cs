@@ -34,8 +34,10 @@ namespace Lantmannen.Agrolkortet2Theme.Setup
                 yield return new ThemeStyle("StandardPage", "Article page", "article-page", true);
                 yield return new ThemeStyle("StandardPage", "Start page", "start-page");
 
-                // page wrapper
-                yield return new ThemeStyle("StandardPage", ThemeStyleKeys.PageTypeWrapper, "standard-page");
+				yield return new ThemeStyle("SectionBlock", "Footer Section", "footer-section");
+
+				// page wrapper
+				yield return new ThemeStyle("StandardPage", ThemeStyleKeys.PageTypeWrapper, "standard-page");
 
                 //List styles
                 yield return new ThemeStyle("ListBlock", "White background", "list--white-background");

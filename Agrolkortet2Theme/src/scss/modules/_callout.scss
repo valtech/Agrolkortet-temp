@@ -99,6 +99,10 @@
             justify-content: flex-start;
             align-items: center;
             padding: calc(#{$base-padding} / 2) 15%;
+
+            &--no-image {
+                padding-top: 2rem;
+            }
         }
 
         &__image-wrapper {

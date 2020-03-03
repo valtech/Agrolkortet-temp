@@ -17,7 +17,7 @@
             </picture>
         }
 
-        <div class="callout__body">
+        <div class="callout__body @(Model.Has(Model.Current.Image) ? "" : "callout__body--no-image")">
             @if (Model.Has(Model.Current.Title))
             {                
                 <h3 class="callout__title" @Html.EditAttributes(m => m.Current.Title)>
