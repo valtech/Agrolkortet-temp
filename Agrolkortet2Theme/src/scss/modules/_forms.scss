@@ -1,3 +1,206 @@
-.form {
-    
+.EPiServerForms {
+	background-color: $color-white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0.5rem 0;
+	margin: $half-grid-gap 0;
+
+	@include for-tablet-and-up {
+		padding: 3rem 0;
+	}
+
+	section {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.Form {
+
+		&__MainBody, &__Title, &__Description {
+			@include container;
+			max-width: 600px;
+		}
+
+		&__Description {
+			white-space: pre-line;
+		}
+
+		&__Title {
+			@extend %h4;
+			color: $color-grey;
+			margin: 1rem 0;
+		}
+
+		&__Status {
+			width: 600px;
+
+			.Form__Status__Message.hide {
+				display: none;
+			}
+
+			.Form__Success__Message.Form__Success__Message {
+				background-color: inherit;
+			}
+		}
+
+		&__Element .FormParagraphText {
+			@extend %bullet-list;
+			width: 100%;
+
+			h5 {
+				color: $color-black;
+				font-size: 15px;
+			}
+
+			h6 {
+				color: $color-grey;
+				line-height: 14px;
+				font-size: 12px;
+				font-weight: normal;
+				font-stretch: normal;
+			}
+		}
+
+		&__Element {
+			margin-bottom: 0px;
+			line-height: 1.6;
+
+			h1 {
+				text-transform: uppercase;
+				color: $color-black;
+				font-size: 15px;
+				margin-top: 0px;
+				font-stretch: condensed;
+			}
+
+			&__ValidationError {
+				margin-top: 0.5rem;
+			}
+
+			.FormTextbox, .FormTextbox--Textarea {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+
+				input, textarea {
+					@extend %p;
+					@extend %input-box;
+				}
+
+				textarea {
+					height: 150px;
+				}
+
+				@include for-desktop-and-up {
+					width: 48%;
+				}
+			}
+
+			.FormSelection {
+				@extend %dropdown-box-forms;
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+
+				&:nth-child(n) {
+					align-self: flex-end;
+				}
+
+				@include for-desktop-and-up {
+					width: 48%;
+				}
+			}
+
+			.FormChoice {
+				width: 100%;
+
+				fieldset {
+					width: 100%;
+					border: none;
+					display: flex;
+					flex-direction: row;
+					flex-wrap: wrap;
+					padding: 0px;
+
+					legend {
+						font-size: 16px;
+						padding-bottom: 10px;
+						width: 100%;
+					}
+
+					label {
+						position: relative;
+						color: $color-grey;
+
+						&:hover {
+							cursor: pointer;
+						}
+
+						input {
+							appearance: none;
+
+							&::-ms-expand { // IE fix
+								display: none;
+							}
+
+							margin-right: 5px;
+							background-color: #fafafa;
+							border: 1px solid #cacece;
+							padding: 6px;
+							border-radius: 3px;
+
+							&:checked:after {
+								position: absolute;
+								content: "";
+								top: 7px;
+								left: 2px;
+								height: 8px;
+								width: 12px;
+								background-image: url(assets/img/icon-check-black.svg);
+								background-repeat: no-repeat;
+								background-size: contain;
+							}
+						}
+
+						&:not(:last-child) {
+							padding-bottom: 5px;
+						}
+
+						@include for-desktop-and-up {
+							width: 48%;
+							margin: 0;
+						}
+					}
+				}
+			}
+
+			button {
+				@include primary-btn;
+				align-self: flex-start;
+				border-style: none;
+				font-size: 17px;
+				font-weight: bold;
+				padding-bottom: 10px;
+
+				@include for-desktop-and-up {
+					margin-right: 60%;
+				}
+			}
+		}
+
+
+		&FileUpload {
+			display: flex;
+			flex-direction: column;
+
+			input {
+				@extend %p;
+				font-size: 0.9rem;
+				margin-top: 0.5rem;
+			}
+		}
+	}
 }

@@ -1,10 +1,12 @@
 @if (HttpContext.Current.IsDebuggingEnabled)
 {
     // Development
-    <link rel="stylesheet" href="@Fingerprint.Tag("/dist/Agrolkortet2Theme/main.css")"/>
+    <link rel="stylesheet" href="@Fingerprint.Tag("/dist/Agrolkortet2Theme/main.css")" />
+
+
 }
 else
 {
     // Production
-    <link rel="stylesheet" href="@Fingerprint.Tag("/dist/Agrolkortet2Theme/main.min.css")"/>
+    <link rel="stylesheet" href="@Fingerprint.Tag("/dist/Agrolkortet2Theme/main.min.css")" />
 }
