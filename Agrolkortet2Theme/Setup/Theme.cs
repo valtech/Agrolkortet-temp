@@ -14,6 +14,8 @@ namespace Lantmannen.Agrolkortet2Theme.Setup
             get
             {
 	            // Default "Standard" styles (All modules should have one, use string.Empty for no class)
+                yield return new ThemeStyle("BannerBlock", "Standard", string.Empty, true);
+                
                 yield return new ThemeStyle("CalloutBlock", "Standard", string.Empty, true);
 
                 yield return new ThemeStyle("LogoBlock", "Standard", string.Empty, true);
@@ -38,6 +40,9 @@ namespace Lantmannen.Agrolkortet2Theme.Setup
 
 				// page wrapper
 				yield return new ThemeStyle("StandardPage", ThemeStyleKeys.PageTypeWrapper, "standard-page");
+
+                //Banner styles
+                yield return new ThemeStyle("BannerBlock", "Hero Banner", "banner--hero");
 
                 //List styles
                 yield return new ThemeStyle("ListBlock", "White background", "list--white-background");

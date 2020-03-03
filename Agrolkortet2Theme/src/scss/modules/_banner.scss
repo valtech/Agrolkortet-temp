@@ -49,3 +49,38 @@
         }
     }
 }
+
+.banner--hero{
+    display: block;
+    overflow-x: hidden;
+
+    @include for-tablet-and-up {
+        display: flex;
+    }
+
+    .banner {
+        &-text-box {
+            text-align: left;
+            background: $color-white-90;
+            padding: 2rem;
+            margin: 0.5rem;
+        }
+
+        &-link {
+            margin-left: 0;
+        }
+
+        &__secondary-image {
+            display: block;
+            width: 80%;
+            margin-left: auto;
+            position: relative;
+            top: -1.5rem;
+            right: -1rem;
+
+            img {
+                height: auto;
+            }
+        }
+    }
+}
