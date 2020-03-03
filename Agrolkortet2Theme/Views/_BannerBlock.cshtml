@@ -46,12 +46,11 @@
                 <a class="banner-link" href="@Url.ContentUrl(Model.Current.Link.ToString())">@Model.Current.LinkText</a>
             }
         </div>
+        @if (Model.Has(Model.Current.Style) && Model.Current.Style.Contains("banner--hero"))
+        {
+            <picture class="banner__secondary-image">
+                <img srcset="@Url.ContentUrl(Model.Image.MediumImage)" alt="@Model.Image.Description">
+            </picture>
+        }
     </div>
-
-    @if (Model.Has(Model.Current.Style) && Model.Current.Style.Contains("banner--hero"))
-    {
-        <picture class="banner__secondary-image">
-            <img srcset="@Url.ContentUrl(Model.Image.MediumImage)" alt="@Model.Image.Description">
-        </picture>
-    }
 </div>

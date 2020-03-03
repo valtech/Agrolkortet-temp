@@ -52,18 +52,40 @@
 
 .banner--hero{
     display: block;
-    overflow-x: hidden;
+    overflow: hidden;
+    max-height: none;
 
     @include for-tablet-and-up {
         display: flex;
     }
 
     .banner {
+        &-overlay {
+            position: relative;
+
+            @include for-tablet-and-up {
+                margin: 5rem 1rem;
+                width: 100%;
+                max-width: 1200px;
+            }
+        }
+
         &-text-box {
             text-align: left;
             background: $color-white-90;
             padding: 2rem;
             margin: 0.5rem;
+
+            @include for-tablet-and-up {
+                width: 50%;
+                padding: 3rem;
+            }
+        }
+
+        &-title {
+            @include for-desktop-and-up {
+                font-size: 3.5rem;
+            }
         }
 
         &-link {
@@ -80,6 +102,14 @@
 
             img {
                 height: auto;
+            }
+
+            @include for-tablet-and-up {
+                width: 55%;
+                position: absolute;
+                bottom: -3rem;
+                right: 0;
+                top: auto;
             }
         }
     }
