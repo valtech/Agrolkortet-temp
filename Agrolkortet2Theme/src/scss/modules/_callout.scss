@@ -19,10 +19,13 @@
 
     &__image-wrapper {
         flex: 1;
-        padding: calc(#{$base-padding} / 2);
+        
+        img {
+            padding: calc(#{$base-padding} / 2);
 
-        @include for-tablet-and-up {
-            padding: $base-padding;
+            @include for-tablet-and-up {
+                padding: $base-padding;
+            }
         }
     }
     
@@ -106,7 +109,9 @@
         }
 
         &__image-wrapper {
-            padding: 0;
+            img {
+                padding: 0;
+            }
         }
 
         &__title {

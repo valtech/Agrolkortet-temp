@@ -1,7 +1,29 @@
 @model BannerBlockViewModel
+@using Lantmannen.Helpers;
 
 <div class="banner @Model.Current.Style">
-    @{ Html.RenderPartial(this.PathToViews(Model.GetType(), "_BannerBlockImage.cshtml"), Model.Image); }
+    @if (Model.Has(Model.Current.Style) && Model.Current.Style.Contains("banner--hero"))
+    {
+        <picture class="banner-image">
+                <source srcset="@Url.ContentUrl(Model.Image.LargeImage)?maxwidth=1920" media="(min-width: 1600px)">
+                <source srcset="@Url.ContentUrl(Model.Image.LargeImage)?maxwidth=1600" media="(min-width: 1366px)">
+                <source srcset="@Url.ContentUrl(Model.Image.LargeImage)?maxwidth=1366" media="(min-width: 768px)">
+
+                @if (Model.Has(Model.Image.SmallImage))
+                {
+                    <img srcset="@Url.ContentUrl(Model.Image.SmallImage)" alt="@Model.Image.Description">
+                }
+                else
+                {
+                    <img srcset="@Url.GetCropUrl(Model.Image.LargeImage, 500, 350)" alt="@Model.Image.Description">
+                }
+        </picture>
+    }
+    else 
+    {
+        Html.RenderPartial(this.PathToViews(Model.GetType(), "_BannerBlockImage.cshtml"), Model.Image);
+    }
+
     <div class="banner-overlay">
         <div class="banner-text-box">
             @if (Model.Current.ShouldHaveH1Title)
@@ -24,5 +46,11 @@
                 <a class="banner-link" href="@Url.ContentUrl(Model.Current.Link.ToString())">@Model.Current.LinkText</a>
             }
         </div>
+        @if (Model.Has(Model.Current.Style) && Model.Current.Style.Contains("banner--hero"))
+        {
+            <picture class="banner__secondary-image">
+                <img srcset="@Url.ContentUrl(Model.Image.MediumImage)" alt="@Model.Image.Description">
+            </picture>
+        }
     </div>
 </div>
