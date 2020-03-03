@@ -46,7 +46,7 @@
     }
 }
 
-.banner--hero{
+.banner--hero {
     display: block;
     overflow: hidden;
     max-height: none;
@@ -75,10 +75,13 @@
             @include for-tablet-and-up {
                 width: 50%;
                 padding: 3rem;
+                min-width: 410px;
             }
         }
 
         &-title {
+            @extend h2;
+
             @include for-desktop-and-up {
                 font-size: 3.5rem;
             }
@@ -104,7 +107,8 @@
                 width: 55%;
                 position: absolute;
                 bottom: -3rem;
-                right: 0;
+                left: 45%;
+                right: auto;
                 top: auto;
             }
         }
